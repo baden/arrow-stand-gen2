@@ -3,7 +3,7 @@
  * @brief   Power budget constants and the sleep state machine of the target.
  *
  * The numbers below are the design budget from
- * docs/manufacturing/power-budget.md (v1.0, 2026-11-18). They are the
+ * docs/manufacturing/power-budget.md (v2.0, 2026-11-18). They are the
  * acceptance criteria for the bench measurement R-16:
  *
  *   idle (sleeping)   <= 30 uA   (measured 493 uA before ADR-0014)

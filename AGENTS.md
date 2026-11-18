@@ -56,6 +56,25 @@
    «Update Footprints from Library» (KiCad) або `update_footprints_from_library`
    (MCP, потрібен відкритий pcbnew). Перевірка: `make check-3d`.
 
+10. **KiCad IPC: що насправді потрібно.** Перевага «Enable KiCad API» у
+    `kicad_common.json` (`"api": {"enable_server": true}`) — це **не** те, що
+    ламає доступ. IPC-сервер піднімає **менеджер проєкту** (`kicad.exe`), і
+    він обслуговує лише документи, відкриті **через менеджер**. Перевірено
+    2026-11-18:
+    - `pcbnew.exe <файл>`, запущений окремо, **не реєструє** плату в IPC →
+      усі pcb-інструменти Copperpour відповідають «KiCAD must be running with
+      the board loaded (Connection refused)», хоча вікно pcbnew відкрите;
+    - виклики зі схемою (eeschema/kicad-side) працюють, поки запущено менеджер;
+    - «Connection refused» означає «сервер не слухає», а не «API вимкнено»;
+    - `BeginCommit without a document specified is not allowed when multiple
+      editors are open` → у цей момент відкриті **два** редактори (напр. pcbnew
+      і eeschema) — закрийте один.
+
+    **Як робити PCB-операції через MCP:** відкрити плату **з дерева проєкту** в
+    менеджері (подвійний клік по `.kicad_pcb`), тоді `update_pcb_from_schematic`
+    працює. Якщо потрібен лише редактор — Tools → Update PCB from Schematic
+    у самому pcbnew.
+
 ## 1. Що це за проєкт
 
 Див. [README.md](README.md). Коротко: датчик влучання в мішень.

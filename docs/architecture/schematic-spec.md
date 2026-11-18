@@ -55,6 +55,7 @@
 | C12 | TBD | — | TBD | 0402 | shunt π-мережі (R-15) |
 | C16 | TBD | — | TBD | 0402 | DC block RFO→ANT_RF (R-15) |
 | TP1, TP2 | TestPoint_Pad | — | TP_PDI / TP_SCLK | 1×1 мм | WCH ISP |
+| BT1 | LiPower LP802023 | — (RCS 174469) | 3.7 В 240 мАг | Pouch 8×20×23 | pouch + PCM + 2 дроти 24 AWG; клеїться на зворотний бік |
 | TP5, TP6 | TestPoint_Pad | — | BAT+ / BAT− | 1×1 мм | припаюваний акумулятор |
 | ANT1 | AILF002 | C22467622 | 433 МГц | — | поза PCB: антена + кабель + SMA-штекер |
 
@@ -160,7 +161,8 @@ EasyEDA для CH32V203C8U6.
 
 | Елемент | Підключення |
 |---|---|
-| TP5 / TP6 | акумулятор LiPo 1S припаюється: BAT+ → `VBAT`, BAT− → `GND` |
+| TP5 / TP6 | контрольні точки на `VBAT` / `GND` (SMD 1×1 мм) |
+| BT1 | акумулятор LiPo 1S: BAT+ (pad 1, червоний) → `VBAT`, BAT− (pad 2, чорний) → `GND`. Дроти 80 мм відрізаються до ~15 мм і припаюються в отвори Ø0.7 мм з боку плати; елемент клеїться на **зворотний бік** |
 | U5 TP4056 | VCC(4) ← `CHG_IN`, BAT(5) ← `VBAT`, TEMP(1) ← GND, PROG(2) ← `PROG` (R6 10 кОм → GND, 100 мА), GND(3) ← GND, STDBY#(6) → NC, CHRG#(7) → NC, CE(8) ← GND, EP(9) ← GND |
 | U4 LDO | IN(3) ← `VBAT`, GND(1) ← GND, OUT(2) → `VCC_3V3`; CE немає — LDO завжди увімкнений; C6 1 мкФ на IN, C7 1 мкФ на OUT |
 | R2, R3 | 22 кОм: `VBAT` → **Q1.D** → **Q1.S** → R2.1 → `VBAT_ADC` → R3 → GND; `VBAT_ADC` → PA1 (ADC1), C11 10 нФ; Q1.gate ← PA10 (`VBAT_DIV_EN`). **У сні Q1 вимкнено — дільник не споживає нічого** |

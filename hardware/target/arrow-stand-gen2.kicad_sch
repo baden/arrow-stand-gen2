@@ -6543,6 +6543,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 127) (xy 45.72 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3b1d4a6-c6d4-440a-81fb-299cc0f1d948")
+	)
+	(wire
+		(pts
 			(xy 33.02 124.46) (xy 45.72 124.46)
 		)
 		(stroke
@@ -6862,12 +6872,12 @@
 		(uuid "2384436c-4a8f-47e0-a829-4fcbb402e76d")
 	)
 	(label "BTN"
-		(at 45.72 127 180)
+		(at 33.02 127 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "28289b7d-233c-4a96-b55b-330091a7eed6")
 	)
@@ -9339,7 +9349,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "3fb166b2-710e-4e12-b324-1f56346bf178")
 		(property "Reference" "R5"
 			(at 50.292 182.88 90)
@@ -12488,7 +12498,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "a058e488-2916-471a-98d9-9099968b1984")
 		(property "Reference" "SW1"
 			(at 29.21 180.34 0)

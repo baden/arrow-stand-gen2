@@ -7,6 +7,14 @@
 ### Added — апаратна частина
 ### Added
 ### Added
+- **3D-модель USB-C**: у KiCad **відсутній** `USB_C_Receptacle_HRO_TYPE-C-31-M-12.step`
+  (відома помилка upstream KiCad #22139 — футпринт посилається на неіснуючий
+  файл). Модель завантажено (207 КБ, STEP) у `hardware/common/packages3d/` і
+  продубльовано в `hardware/{target,hub}/packages3d/`; створено проєктні копії
+  футпрінта `arrowstand:USB_C_Receptacle_HRO_TYPE-C-31-M-12` з моделлю
+  `${KIPRJMOD}/packages3d/...`.
+
+### Added
 - **`tools/check_3d_models.py`** + `make check-3d` — перевірка, чи є 3D-моделі у
   **розміщених** екземплярах обох PCB (KiCAD зберігає копію футпрінта в платі,
   тож модель із бібліотеки не потрапляє в плату автоматично).

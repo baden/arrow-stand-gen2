@@ -164,6 +164,39 @@ KiCAD зберігає в `.kicad_pcb` **копію** кожного футпр�
 відкритим pcbnew із платою; тоді агент викликає
 `update_footprints_from_library` з allowlist на 6 позицій.
 
+### Окремий випадок: USB-C (HRO TYPE-C-31-M-12)
+
+Це **не** проблема доступу, а відома помилка в самому KiCad:
+футпринт `Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12` посилається на
+`${KICAD10_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step`,
+а **такого файлу в репозиторії 3D-моделей KiCad немає** (upstream issue
+kicad#22139). Тому USB-C не малюється в 3D, хоча решта деталей — малюється.
+
+Аудит усіх моделей обох плат показав: **це єдина відсутня модель у всьому
+проєкті** (мішень: 13/14, хаб: 11/12).
+
+**Розв'язання (в репозиторії, без зміни інсталяції KiCad):**
+
+1. Модель покладено в `hardware/common/packages3d/` (джерело — спільнота
+   NabuCasa/yellow-3dshapes, STEP для HRO TYPE-C-31-M-12).
+2. Продубльовано в `hardware/target/packages3d/` і `hardware/hub/packages3d/`.
+3. Створено проєктні копії футпрінта
+   `arrowstand:USB_C_Receptacle_HRO_TYPE-C-31-M-12` (у `arrowstand.pretty/`
+   обох проєктів) з моделлю `${KIPRJMOD}/packages3d/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step`.
+
+**Ще треба зробити:** перемкнути J3 у схемах на проєктний футпринт
+(властивість Footprint -> `arrowstand:USB_C_Receptacle_HRO_TYPE-C-31-M-12`),
+потім **Tools -> Update Footprints from Library**. Схему зараз редагує KiCad,
+тому правку footprint вносять вручну або після закриття редактора — через MCP.
+
+**Альтернатива в один крок** (не змінює схему й плату, але править
+інсталяцію KiCad — потрібні права адміністратора):
+
+```
+Copy-Item hardware\common\packages3d\USB_C_Receptacle_HRO_TYPE-C-31-M-12.step `
+  "C:\Program Files\KiCad\10.0\share\kicad\3dmodels\Connector_USB.3dshapes\"
+```
+
 ### Чому vendor-моделі не вдалося поставити
 
 | Джерело | Результат |

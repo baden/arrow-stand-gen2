@@ -32,7 +32,7 @@ arrow-stand-gen2/
 │   │   └── 0006-assembly-model.md
 │   ├── components/              нотатки по компонентах, даташити
 │   ├── cost/                    budget.md, bom-draft.md, cost-model.md
-│   ├── manufacturing/           assembly notes, fab requirements
+│   ├── manufacturing/           інструкції складання, перевірка футпрінтів і 3D
 │   └── research/                результати досліджень
 │
 ├── hardware/

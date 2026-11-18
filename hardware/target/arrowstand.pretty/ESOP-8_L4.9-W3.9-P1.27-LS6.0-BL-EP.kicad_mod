@@ -19,4 +19,8 @@
   (fp_circle (center -1.9050 4.0580) (end -1.7550 4.0580) (stroke (width 0.1) (type solid)) (fill solid) (layer "F.SilkS"))
   (fp_text reference "REF**" (at 0.0000 -4.7580 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
   (fp_text value "ESOP-8_L4.9-W3.9-P1.27-LS6.0-BL-EP" (at 0.0000 4.7580 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+  (model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.81mm.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0)))
 )

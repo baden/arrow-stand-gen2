@@ -22,6 +22,7 @@
 | `VCC_3V3` | LDO ME6211C33M5G-N OUT | SX1262 (VDD_IN, VBAT, VBAT_IO), CH32V203 (VDD), SC7A20 (VDD), pull-ups |
 | `CHG_IN` | USB-C VBUS (4 контакти A4/A9/B4/B9) | TP4056 VCC |
 | `VBAT_ADC` | дільник батареї R2/R3 | PA1 (ADC1), C11 |
+| `VBAT_SW` | R2.1 ↔ Q1.S (перемикач дільника) | Q1, R2 |
 | `VBAT_DIV_EN` | Q1.gate (PA10) | перемикач дільника батареї |
 | `GND` | — | все |
 
@@ -162,7 +163,8 @@ EasyEDA для CH32V203C8U6.
 | TP5 / TP6 | акумулятор LiPo 1S припаюється: BAT+ → `VBAT`, BAT− → `GND` |
 | U5 TP4056 | VCC(4) ← `CHG_IN`, BAT(5) ← `VBAT`, TEMP(1) ← GND, PROG(2) ← `PROG` (R6 10 кОм → GND, 100 мА), GND(3) ← GND, STDBY#(6) → NC, CHRG#(7) → NC, CE(8) ← GND, EP(9) ← GND |
 | U4 LDO | IN(3) ← `VBAT`, GND(1) ← GND, OUT(2) → `VCC_3V3`; CE немає — LDO завжди увімкнений; C6 1 мкФ на IN, C7 1 мкФ на OUT |
-| R2, R3 | 22 кОм: `VBAT` → Q1.drain → `VBAT_ADC` → R3 → GND; `VBAT_ADC` → PA1 (ADC1), C11 10 нФ; Q1.gate ← PA10 (`VBAT_DIV_EN`). **У сні Q1 вимкнено — дільник не споживає нічого** |
+| R2, R3 | 22 кОм: `VBAT` → **Q1.D** → **Q1.S** → R2.1 → `VBAT_ADC` → R3 → GND; `VBAT_ADC` → PA1 (ADC1), C11 10 нФ; Q1.gate ← PA10 (`VBAT_DIV_EN`). **У сні Q1 вимкнено — дільник не споживає нічого** |
+| Q1 | 2N7002 (SOT-23): D(3) ← `VBAT`, S(2) → `VBAT_SW`, G(1) ← `VBAT_DIV_EN` (PA10, pin 31) |
 
 ## 7. Програмування
 
@@ -216,8 +218,12 @@ EasyEDA для CH32V203C8U6.
 
 ## 13. Відкриті питання по схемі
 
+**PWR_FLAG** на мережі `VBAT` (позначка джерела живлення для ERC) —
+обов'язково, бо вивід XC6202 VI має тип power_input.
+
 | # | Питання | Статус |
 |---|---|---|
 | S1 | Значення C12 (shunt) і C16 (DC block) | TBD — R-15 |
+| S4 | Оновити PCB після зміни живлення (U4 SOT-23-3, +Q1, −R1/R4) | Tools → Update PCB from Schematic |
 | S2 | Сумісність футпрінта `SMA_Amphenol_132289_EdgeMount` із клоном M2-SMA-42M | перевірити перед замовленням PCB |
 | S3 | Чи вистачить запасу по пінах USB-C (4 VBUS + 4 GND + SHIELD) на краю плати | вирішити на layout |

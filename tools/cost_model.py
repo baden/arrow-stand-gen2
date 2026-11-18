@@ -26,15 +26,15 @@ from pathlib import Path
 # Використовуються лише для позицій, яких немає в самому BOM
 # (наприклад, PCB або батарея).
 REFERENCE_COSTS = {
-    "pcb_2layer_35x40": 0.35,
+    "pcb_2layer_45x50": 0.45,
     "lipo_1s_200mah": 2.00,
     "smt_assembly_per_unit": 2.25,
     "setup_fee_per_unique_extended": 3.00,
 }
 
 # Цілі (docs/cost/budget.md) — замовлення 100 шт.
-GOAL_USD = 3.75
-REALISTIC_USD = 3.75
+GOAL_USD = 4.10
+REALISTIC_USD = 4.05
 CEILING_USD = 4.50
 
 # Позиції, що не входять у вартість пристрою (навкруг пристрою).
@@ -230,8 +230,8 @@ def report(res: Result) -> str:
         lines.append(f"  {block:<32} ${cost:<7.3f} ({cost / total * 100:4.1f} %)")
     lines.append("")
     lines.append(f"Разом компонентів:            ${res.total:.3f}")
-    lines.append(f"PCB 2 шари (референс):        ${REFERENCE_COSTS['pcb_2layer_35x40']:.3f}")
-    grand = res.total + REFERENCE_COSTS["pcb_2layer_35x40"]
+    lines.append(f"PCB 2 шари (референс):        ${REFERENCE_COSTS['pcb_2layer_45x50']:.3f}")
+    grand = res.total + REFERENCE_COSTS["pcb_2layer_45x50"]
     lines.append(f"РАЗОМ (пристрій):             ${grand:.3f}")
     lines.append("")
     lines.append(
@@ -258,7 +258,7 @@ def report(res: Result) -> str:
 
 
 def to_markdown(res: Result) -> str:
-    grand = res.total + REFERENCE_COSTS["pcb_2layer_35x40"]
+    grand = res.total + REFERENCE_COSTS["pcb_2layer_45x50"]
     lines = []
     lines.append("<!-- Згенеровано tools/cost_model.py — не редагувати руками -->")
     lines.append("")
@@ -342,7 +342,7 @@ def main() -> int:
         print(f"\nЗаписано: {args.out}")
 
     if args.check:
-        grand = res.total + REFERENCE_COSTS["pcb_2layer_35x40"]
+        grand = res.total + REFERENCE_COSTS["pcb_2layer_45x50"]
         if grand > GOAL_USD:
             print(f"\nFAIL: ${grand:.3f} > ціль ${GOAL_USD:.2f}", file=sys.stderr)
             return 1

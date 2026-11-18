@@ -1,7 +1,8 @@
 # Специфікація схеми — arrow-stand-gen2 (варіант «мішень»)
 
-> Статус: **v1.2** · 2026-11-18 · **синхронізовано зі збудованою схемою**
-> `hardware/kicad/arrow-stand-gen2.kicad_sch` (ERC 0/0, orphans 0, shorts 0,
+> Статус: **v1.3** · 2026-11-18 · **синхронізовано зі збудованою схемою**
+> (MCU замінено на CH32V203C8U6 — ADR-0011; див. §5)
+> `hardware/target/arrow-stand-gen2.kicad_sch` (ERC 0/0, orphans 0, shorts 0,
 > 38 компонентів, 28 мереж).
 > Це канон: будь-який вихід за специфікацію — тільки з ADR.
 
@@ -94,34 +95,59 @@
 | 11 | NC | NC |
 | 12 | SCx | `SPI1_SCK` |
 
-## 5. Підключення U2 — CH32V203F8U6 (QFN-20)
+## 5. Підключення U2 — CH32V203C8U6 (QFN-48, ADR-0011)
 
-У корпусі QFN20 **немає виводів NRST і BOOT0** (BOOT0 = GND внутрішньо);
-**немає і PA11/PA12**, тобто USB FS недоступний.
+У корпусі QFN-48 **є** виводи NRST (7) і BOOT0 (44), а **немає** PA11/PA12
+у QFN-20 — саме тому MCU замінено (див. ADR-0011). Імена виводів — за символом
+EasyEDA для CH32V203C8U6.
 
 | Вивід | Сигнал | Мережа | Куди |
 |---|---|---|---|
-| 1 | PA0 | `BTN` | SW1.1 + R5 ↑ VCC_3V3 (DNP) |
-| 2 | PA1 | `VBAT_ADC` | R2/R3 дільник + C11 100 нФ |
-| 3 | PA2 | `CS_RADIO` | U1 NSS (19) |
-| 4 | PA3 | `CS_ACC` | U3 CS (10) |
-| 5 | PA4 | `BUSY_RADIO` | U1 BUSY (14), вхід |
-| 6 | PA5 | `SPI1_SCK` | U1 SCK (18) + U3 SCx (12) |
-| 7 | PA7 | `SPI1_MOSI` | U1 MOSI (17) + U3 SDx (2) |
-| 8 | PB0 | `INT_ACC` | U3 INT1 (5), вхід/wake-up |
-| 9 | PB1 | NC | — |
-| 10 | PB10 | NC | резерв під п'єзо-канал (ADR-0003) |
-| 11 | PB11 | NC | — |
-| 12 | PB14 | NC | — |
-| 13 | PB15 | NC | — |
-| 14 | PA8 | `DIO1_RADIO` | U1 DIO1 (13) |
-| 15 | PA9 | `NRST_RADIO` | U1 NRESET (15) |
-| 16 | PA13 | `TP_PDI` | TP1 (WCH ISP PDI) |
-| 17 | PA14 | `TP_SCLK` | TP2 (WCH ISP SCLK) |
-| 18 | PA10 | NC | — |
-| 19 | VDD | `VCC_3V3` | + C8 100 нФ |
-| 20 | PA6 | `SPI1_MISO` | U1 MISO (16) + U3 SDO (1) |
-| 21 (EP) | GND | `GND` | термальна площадка |
+| 1 | VBAT | `VCC_3V3` | backup-домен (RTC-батареї немає) |
+| 2 | PC13/TAMPER_RTC | NC | |
+| 3 | PC14/OSC32IN | NC | |
+| 4 | PC15/OSC32OUT | NC | |
+| 5 | OSC_IN/PD0 | NC | |
+| 6 | OSC_OUT/PD1 | NC | |
+| 7 | NRST | NC | зовнішнього RC немає; скидає WCH-Link по DAP |
+| 8 | VSSA | `GND` | |
+| 9 | VDDA | `VCC_3V3` | |
+| 10 | PA0/WKUP/ADC0 | `BTN` | SW1.1 + R5 ↑ VCC_3V3 (DNP) |
+| 11 | PA1/ADC1 | `VBAT_ADC` | R2/R3 дільник + C11 100 нФ |
+| 12 | PA2/ADC2 | `CS_RADIO` | U1 NSS (19) |
+| 13 | PA3/ADC3 | `CS_ACC` | U3 CS (10) |
+| 14 | PA4/ADC4 | `BUSY_RADIO` | U1 BUSY (14), вхід |
+| 15 | PA5/ADC5 | `SPI1_SCK` | U1 SCK (18) + U3 SCx (12) |
+| 16 | PA6/ADC6 | `SPI1_MISO` | U1 MISO (16) + U3 SDO (1) |
+| 17 | PA7/ADC7 | `SPI1_MOSI` | U1 MOSI (17) + U3 SDx (2) |
+| 18 | PB0/ADC8 | `INT_ACC` | U3 INT1 (5), вхід/wake-up |
+| 19 | PB1/ADC9 | NC | вільний ADC-канал (резерв) |
+| 20 | PB2/BOOT1 | `GND` | strap: гарантовано boot з Flash. **Не GPIO** |
+| 21 | PB10 | NC | резерв під п'єзо-канал |
+| 22 | PB11 | NC | |
+| 23 | VSS_1 | `GND` | |
+| 24 | VDD_VIO_1 | `VCC_3V3` | |
+| 25–28 | PB12, PB13, PB14, PB15 | NC | |
+| 29 | PA8 | `DIO1_RADIO` | U1 DIO1 (13) |
+| 30 | PA9 | `NRST_RADIO` | U1 NRESET (15) |
+| 31 | PA10 | NC | |
+| 32 | PA11/USB1DM | `USB_D-` | J3 A7, B7 |
+| 33 | PA12/USB1DP | `USB_D+` | J3 A6, B6 |
+| 34 | PA13/SWDIO | `TP_PDI` | TP1 (WCH ISP PDI / SWDIO) |
+| 35 | VSS_2 | `GND` | |
+| 36 | VDD_2 | `VCC_3V3` | |
+| 37 | PA14/SWCLK | `TP_SCLK` | TP2 (WCH ISP SCLK / SWCLK) |
+| 38 | PA15 | NC | |
+| 39–41 | PB3, PB4, PB5 | NC | |
+| 42, 43 | PB6/USB2DM, PB7/USB2DP | NC | |
+| 44 | BOOT0 | `GND` | strap: boot з Flash (ROM-прошивання неможливе) |
+| 45, 46 | PB8, PB9 | NC | |
+| 47 | VSS_3 | `GND` | |
+| 48 | VDD_VIO_3 | `VCC_3V3` | |
+| 49 | EP | `GND` | термальна площадка |
+
+Живлення U2: `VCC_3V3` ← 1 (VBAT), 9 (VDDA), 24 (VDD_VIO_1), 36 (VDD_2),
+48 (VDD_VIO_3). Земля U2: 8, 20, 23, 35, 44, 47, 49.
 
 ## 6. Живлення
 

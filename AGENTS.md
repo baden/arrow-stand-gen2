@@ -15,8 +15,8 @@
 
 2. **Вартість — первинний критерій.** Кожна додана деталь має бути записана в
    `hardware/bom/bom-draft.csv` з обґрунтуванням у колонці `rationale`.
-   Деталь без обґрунтування — не існує. Бюджет: **≤ $3.75** за пристрій
-   при партії 100 шт (поточна конфігурація — ADR-0010).
+   Деталь без обґрунтування — не існує. Бюджет: **≤ $4.10** за пристрій
+   при партії 100 шт (поточна конфігурація — ADR-0010 + ADR-0011).
 
 3. **Мінімум унікальних деталей.** Кожна унікальна позиція в BOM — це
    setup-fee на стороні SMT-складальника (~$3 за позицію, якщо деталь не з
@@ -62,9 +62,10 @@
 
 ```
 docs/        вимоги, архітектура, ADR, план дослідження, вартість
-             architecture/schematic-spec.md — канон побудови схеми
-hardware/    kicad/ (проєкт KiCAD), bom/, mechanical/, assembly/
-firmware/    src/, include/, platform/, tests/
+             architecture/schematic-spec.md — канон схеми мішені
+             hub/hub-requirements.md   — канон ТЗ хаба
+hardware/    target/ + hub/ (проєкти KiCAD), bom/, mechanical/, assembly/
+firmware/    common/ (спільне), target/ (мішень), hub/ (хаб)
 tools/       скрипти
 .opencode/   skills/ (проєктні скіли), agent/ (проєктний агент)
 ```

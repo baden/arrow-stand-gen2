@@ -19,7 +19,9 @@ arrow-stand-gen2/
 │   ├── 02-directory-layout.md   цей файл
 │   ├── 03-research-plan.md      план дослідження, відкриті питання
 │   ├── architecture/
-│   │   └── schematic-spec.md    специфікація схеми (канон побудови)
+│   │   └── schematic-spec.md    специфікація схеми мішені (канон побудови)
+│   ├── hub/
+│   │   └── hub-requirements.md  ТЗ хаба (канон побудови)
 │   ├── adr/                     архітектурні рішення
 │   │   ├── 0000-template.md
 │   │   ├── 0001-radio.md
@@ -48,12 +50,33 @@ arrow-stand-gen2/
 │   ├── mechanical/              корпус, кріплення до мішені, 3D
 │   └── assembly/                інструкції складання, pick&place
 │
+│   target/                       KiCAD-проєкт «мішень»
+│   │   ├── arrow-stand-gen2.kicad_pro / .kicad_sch / .kicad_pcb
+│   │   ├── arrowstand.kicad_sym   бібліотека символів (майстер)
+│   │   ├── arrowstand.pretty/     бібліотека футпрінтів (майстер)
+│   │   └── .copperpour/project.json  design rules
+│
+│   hub/                          KiCAD-проєкт «хаб»
+│   │   ├── arrow-stand-hub.kicad_pro / .kicad_sch / .kicad_pcb
+│   │   ├── arrowstand.kicad_sym   копія бібліотеки (sync_kicad_libs.py)
+│   │   ├── arrowstand.pretty/     копія бібліотеки
+│   │   └── .copperpour/project.json  design rules
+│
 ├── firmware/
-│   ├── src/                     вихідники C
-│   ├── include/                 заголовки
-│   ├── platform/                HAL: board.h, CH32V203, SX1262, SC7A20, power
-│   ├── tests/                    host-тести логіки (без заліза)
-│   ├── linker/                   ld-скрипти
+│   ├── common/                   спільний код для обох пристроїв
+│   │   ├── include/              protocol.h, hal_*.h
+│   │   ├── src/                  protocol.c, hal_*.c
+│   │   ├── platform/             HAL: CH32V203, SX1262, SC7A20, power
+│   │   ├── linker/               ch32v203.ld (64 KB / 20 KB)
+│   │   └── tests/                host-тести (без заліза)
+│   ├── target/                   «мішень»
+│   │   ├── include/              config.h, app.h
+│   │   ├── src/                  main.c, app.c (детекція + класифікація)
+│   │   └── board.h               розподіл виводів плати
+│   ├── hub/                      «хаб»
+│   │   ├── include/              config.h, app.h
+│   │   ├── src/                  main.c, app.c (реєстр каналів, USB-CDC)
+│   │   └── board.h               розподіл виводів плати
 │   └── README.md
 │
 ├── tools/                       допоміжні скрипти (імпорт BOM, калькулятор вартості)
@@ -76,7 +99,7 @@ arrow-stand-gen2/
 | Рішення «чому отак» | `docs/adr/NNNN-*.md` | вибір SX1262 замість nRF24 |
 | Дослідження | `docs/research/`, `docs/components/` | порівняння акселерометрів |
 | Живий BOM | `hardware/bom/bom-draft.csv` | єдине джерело вартості |
-| KiCAD | `hardware/kicad/` | тільки через MCP |
+| KiCAD | `hardware/target/`, `hardware/hub/` | тільки через MCP |
 | Прошивка | `firmware/` | C, RISC-V |
 
 ### 02.2 Що заборонено
@@ -100,7 +123,8 @@ arrow-stand-gen2/
 
 | Задача | Команда / інструмент |
 |---|---|
-| Зібрати прошивку | `make firmware` (потрібен `riscv-none-elf-gcc`) |
+| Зібрати прошивку | `make firmware DEV=target` / `DEV=hub` (потрібен `riscv-none-elf-gcc`) |
+| Синхронізувати бібліотеки KiCAD | `make libs` (target → hub) |
 | Оновити BOM з KiCAD | `make bom` (kicad-cli) |
 | Перевірити ERC | `make erc` |
 | Перевірити DRC | `make drc` |

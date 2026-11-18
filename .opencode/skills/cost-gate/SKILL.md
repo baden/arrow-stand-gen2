@@ -19,10 +19,10 @@ ready.
 
 | Level | Value | Source |
 |---|---|---|
-| Goal | ≤ $3.75 per device at 100 pcs (PCB + components, no assembly) | `docs/cost/budget.md` |
+| Goal | ≤ $4.10 per device at 100 pcs (PCB + components, no assembly) | `docs/cost/budget.md` |
 | Realistic | ≤ $3.60 | |
 | Hard ceiling | $4.50 — beyond this needs a new ADR | |
-| Current | ≈ $3.73 (варіант C + USB-C, ADR-0010) | |
+| Current | ≈ $4.05 (після ADR-0011: MCU QFN-48 + більша PCB) | |
 
 The radio is **62 %** of the cost ($1.91 for SX1262IMLTRT at 100 pcs).
 Optimising anything else can save at most $0.25. Say this out loud before

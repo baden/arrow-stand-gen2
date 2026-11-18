@@ -4,7 +4,7 @@
 **класифікує подію на пристрої** (ADR-0008), формує пакет 17 Б і відправляє
 по LoRa.
 
-MCU: **CH32V203F8U6** (64 KB Flash / 20 KB SRAM, 144 МГц) — див. ADR-0007.
+MCU: **CH32V203C8U6** (64 KB Flash / 20 KB SRAM, 144 МГц, QFN-48) — ADR-0011.
 Радіо: власний мінімальний драйвер SX1262 (LoRa P2P), **не** Semtech
 LoRa Basics Modem. Діапазон 433 МГц, SF11 / BW 125 кГц.
 
@@ -17,26 +17,37 @@ v2 — готовий і покритий host-тестами.
 
 ```
 firmware/
-├── src/
-│   ├── main.c              точка входу, головний цикл
-│   ├── app.c/.h            логіка застосунку: ініціалізація, обробка події
-│   ├── event.c/.h          детектор удару, ознаки, дебаунс
-│   └── protocol.c/.h       формування пакета v2, CRC8 (є host-тести)
-├── include/
-│   ├── config.h            константи компіляції (LoRa, пороги, розміри)
-│   ├── app.h
-│   └── protocol.h          формат пакета + перелік класів і прапорців
-├── platform/
-│   ├── board.h             розподіл виводів плати (єдине джерело правди)
-│   ├── hal_ch32v203.c/.h   тактування, GPIO, SPI, DMA, ADC, EXTI, USB
-│   ├── hal_sx1262.c/.h     драйвер SX1262 (LoRa P2P)
-│   ├── hal_sc7a20.c/.h     драйвер акселерометра
-│   └── hal_power.c/.h      сон, живлення, заряд батареї
-├── linker/
-│   └── ch32v203.ld         64 KB Flash @ 0x00000000, 20 KB SRAM @ 0x20000000
-└── tests/
-    └── test_protocol.c     host-тести формату пакета і CRC8
+├── common/                   спільний код для обох пристроїв
+│   ├── include/
+│   │   ├── protocol.h        формат пакета + перелік класів і прапорців
+│   │   └── hal_*.h          HAL: CH32V203, SX1262, SC7A20, power, USB
+│   ├── src/
+│   │   ├── protocol.c      формування пакета v2, CRC8
+│   │   └── hal_*.c
+│   ├── platform/             драйвери пристроїв
+│   ├── linker/
+│   │   └── ch32v203.ld      64 KB Flash @ 0x00000000, 20 KB SRAM @ 0x20000000
+│   └── tests/
+│       └── test_protocol.c  host-тести формату пакета і CRC8
+├── target/                   «мішень»
+│   ├── include/
+│   │   ├── config.h         константи компіляції (LoRa, пороги, розміри)
+│   │   └── app.h
+│   ├── src/
+│   │   ├── main.c           точка входу, головний цикл
+│   │   └── app.c            детекція удару, ознаки, класифікація
+│   └── board.h              розподіл виводів плати мішені
+└── hub/                      «хаб»
+    ├── include/
+    │   ├── config.h
+    │   └── app.h
+    ├── src/
+    │   ├── main.c
+    │   └── app.c            прийом пакетів, реєстр каналів, USB-CDC
+    └── board.h              розподіл виводів плати хаба
 ```
+
+Збірка: `make firmware DEV=target` або `make firmware DEV=hub`.
 
 ## Toolchain
 
@@ -73,8 +84,9 @@ gcc -I firmware/include firmware/src/protocol.c firmware/tests/test_protocol.c \
 
 ## Розподіл виводів
 
-Остаточний розподіл — у `firmware/platform/board.h`; він має збігатися зі
-схемою (`docs/architecture/schematic-spec.md`).
+Остаточний розподіл — у `firmware/target/board.h` і `firmware/hub/board.h`;
+вони мають збігатися зі схемами (`docs/architecture/schematic-spec.md`,
+`docs/hub/hub-requirements.md`).
 
 | Функція | CH32V203 | Примітка |
 |---|---|---|
@@ -87,8 +99,12 @@ gcc -I firmware/include firmware/src/protocol.c firmware/tests/test_protocol.c \
 | SC7A20 INT1 | PB0 | вхід, EXTI → пробудження |
 | Кнопка | PA0 | вхід, pull-up (DNP у серії, ADR-0010) |
 | ADC батареї | PA1 | дільник VBAT |
+| USB DM / DP | PA11 / PA12 | CDC (ADR-0011) |
 | ISP PDI / SCLK | PA13 / PA14 | тестові площадки TP1/TP2 |
 | Резерв: п'єзо-канал | PB10 | цифровий вхід (варіант B, ADR-0003) |
+
+**Вільні GPIO:** PB1, PB11, PB12, PB13, PB14, PB15, PA10, PA15, PB3…PB9.
+**Вільний ADC:** PB1 (ADC9). PB2 — strap BOOT1 (на GND), не GPIO.
 
 **Вільні GPIO:** PB1, PB11, PB14, PB15, PA10. **Вільних ADC-каналів немає**
 (PA0…PA7 усі зайняті).

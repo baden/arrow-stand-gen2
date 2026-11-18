@@ -44,9 +44,10 @@ ME6211C33M5G-N ..................... $0.05
 
 ```
 docs/            документація: вимоги, архітектура, ADR, план дослідження, вартість
-                 architecture/schematic-spec.md — специфікація схеми
-hardware/        KiCAD-проєкт, BOM, механіка, збірка
-firmware/        прошивка CH32V203F8U6 (RISC-V), конвеєр аналізу на пристрої
+                 architecture/schematic-spec.md — специфікація схеми мішені
+                 hub/hub-requirements.md   — початкове ТЗ хаба
+hardware/        target/ + hub/ (проєкти KiCAD), BOM, механіка, збірка
+firmware/        common/ (спільне), target/ (мішень), hub/ (хаб)
 tools/           допоміжні скрипти
 .opencode/       проєктні скіли та агент для ШІ
 ```

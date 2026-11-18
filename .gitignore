@@ -1,8 +1,8 @@
 # --- KiCAD ---
 # ВАЖЛИВО: проєктні бібліотеки обов'язково комітяться — без них схема й PCB
 # не відкриваються на іншій машині:
-#   hardware/kicad/arrowstand.kicad_sym   (символи з LCSC/EasyEDA)
-#   hardware/kicad/arrowstand.pretty/     (футпрінти з LCSC/EasyEDA)
+#   hardware/target/arrowstand.kicad_sym   (символи з LCSC/EasyEDA)
+#   hardware/target/arrowstand.pretty/     (футпрінти з LCSC/EasyEDA)
 *.kicad_prl
 *.lck
 *.bak
@@ -21,8 +21,8 @@ fp-info-cache
 .copperpour/*.log
 
 # --- Виробництво / експорт ---
-hardware/kicad/gerbers/
-hardware/kicad/fab/
+hardware/*/gerbers/
+hardware/*/fab/
 hardware/assembly/*.csv
 hardware/bom/bom.csv
 hardware/bom/pickplace.csv

@@ -78,9 +78,9 @@ electrical params. Then apply the project's rules in order:
 ```js
 await tools.copperpour.import_jlcpcb_part({
   lcsc_id: "C191341",
-  project_dir: "<abs path>/hardware/kicad",
+  project_dir: "<abs path>/hardware/target",   # або hardware/hub
   library_name: "jlcpcb",
-  schematic: "<abs path>/hardware/kicad/arrow-stand-gen2.kicad_sch",
+  schematic: "<abs path>/hardware/target/arrow-stand-gen2.kicad_sch",
   x: 100, y: 60,
   reference: "U1"
 })

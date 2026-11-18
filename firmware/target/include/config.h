@@ -19,8 +19,26 @@
 /** Carrier frequency in Hz. 433 MHz (ADR-0005: forest, hilly terrain). */
 #define LORA_FREQ_HZ 433000000uL
 
-/** Spreading factor. 11 buys +6 dB sensitivity => x2 range for >1 km. */
+/**
+ * Default spreading factor.
+ *
+ * ADR-0015: SF must become a **runtime parameter** (1 byte in the packet),
+ * so that the "economy" SF9 and the "insurance" SF11/SF12 can be switched
+ * without reflashing. Rationale and measurements:
+ * docs/research/radio-alternatives.md.
+ *
+ * SF11 buys +6 dB sensitivity vs SF9, but the link already has 76 dB of
+ * margin at 1 km, so the extra margin is bought for 3.5x the airtime
+ * (0.643 s vs 0.181 s) and 3.5x the TX energy per event.
+ */
 #define LORA_SF 11u
+
+/** Minimum SF the firmware accepts from the hub's config packet. */
+#define LORA_SF_MIN 7u
+
+/** Maximum SF the firmware accepts from the hub's config packet.
+ *  LLCC68 supports up to SF9 at 125 kHz, SX1262/SX1268 up to SF12. */
+#define LORA_SF_MAX 12u
 
 /** Bandwidth in Hz. */
 #define LORA_BW_HZ 125000uL

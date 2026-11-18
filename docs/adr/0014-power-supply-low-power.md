@@ -207,3 +207,7 @@ Q1.gate ← PA10 (pin 31) = `VBAT_DIV_EN`
   `GND`, `NRST_RADIO` (знято R1.2). Решта 58 мереж незмінні.
 - Перевірка вартості: `tools/lcsc_prices.py --codes C2897477,C17560,C15195,C8545`
   і `tools/cost_model.py` → сума мішені ≈ $4.04.
+
+## Посилання на акумулятор в Україні:
+
+https://www.rcscomponents.kiev.ua/product/lipo-240-mah-3-7v-8x20x23mm-lipower-akumuliator-litii-polimernyi-lp802023_174469.html

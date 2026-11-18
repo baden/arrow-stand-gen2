@@ -6457,243 +6457,6 @@
 			)
 		)
 	)
-	(footprint "arrowstand:LiPo_LP802023_240mAh"
-		(layer "F.Cu")
-		(uuid "933d55b4-c805-41e9-b482-430a1131c430")
-		(at 135.325 98.275)
-		(descr "LiPo pouch cell LiPower LP802023 240 mAh 3.7 V, 8x20x23 mm, with protection PCB and 2 wires (24 AWG, 80 mm). The wires are cut to length and soldered into the two plated holes (pad 1 = BAT+ red, pad 2 = BAT- black); the cell is glued to the back side of the PCB.")
-		(property "Reference" "BT1"
-			(at -18.5 -4.25 0)
-			(layer "F.SilkS")
-			(uuid "9eb375a5-8c6a-41fc-b248-9e045972d20f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "LiPo_LP802023_240mAh"
-			(at -18.5 4.25 0)
-			(layer "F.Fab")
-			(uuid "67e1721b-2646-4db0-8837-e861cb6ac849")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.rcscomponents.kiev.ua/product/lipo-240-mah-3-7v-8x20x23mm-lipower-akumuliator-litii-polimernyi-lp802023_174469.html"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "b8c3b690-9d79-48bc-9fc9-c4ed157d1c33")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "LiPo pouch cell LiPower LP802023, 240 mAh 3.7 V, 8x20x23 mm, with protection PCB and 2 wires (24 AWG, 80 mm). Wires are cut and soldered into the two plated holes of the footprint (BAT+ = red, BAT- = black)."
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "062a73a9-cc8a-4377-8d5d-6e253c229bcf")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "BOM_Price" "53.50 UAH"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "faac4b8b-7843-43db-afa7-37bd7e91dd07")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "MPN" "LP802023"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "a7215111-8aa5-4056-b9ff-c156b3de18de")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Manufacturer" "LiPower"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "50ead899-801b-464a-9900-030fdfa06c03")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(path "/40cf491d-b642-4136-845f-2a06373c35fe")
-		(sheetname "/")
-		(sheetfile "arrow-stand-gen2.kicad_sch")
-		(attr through_hole)
-		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -21.25 -2)
-			(end -18.75 -2)
-			(stroke
-				(width 0.15)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "8f1d48d8-457f-4286-9baf-145ee2e3a817")
-		)
-		(fp_line
-			(start -21.25 2)
-			(end -18.75 2)
-			(stroke
-				(width 0.15)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "7ef93e98-b4fd-4cbc-aac4-81576f13e3d0")
-		)
-		(fp_line
-			(start -20 0.75)
-			(end -20 3.25)
-			(stroke
-				(width 0.15)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "1ef5f7e0-8ab5-404c-84c9-5e72b1300b9a")
-		)
-		(fp_rect
-			(start -18.5 -9)
-			(end -11.5 9)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.SilkS")
-			(uuid "3a3811d6-d5bf-4eff-b783-b56e578845cf")
-		)
-		(fp_rect
-			(start -11.5 -10)
-			(end 11.5 10)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.SilkS")
-			(uuid "17b8f3f4-98d0-423b-add6-f6ae4df56835")
-		)
-		(fp_rect
-			(start -18.5 -9)
-			(end -11.5 9)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(fill no)
-			(layer "B.SilkS")
-			(uuid "b5661c4b-e9d7-40db-8491-f36b573de565")
-		)
-		(fp_rect
-			(start -11.5 -10)
-			(end 11.5 10)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(fill no)
-			(layer "B.SilkS")
-			(uuid "8dd9f024-f4f0-4210-b518-deeed03e2e5b")
-		)
-		(fp_rect
-			(start -21.25 -10.25)
-			(end 11.75 10.25)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.CrtYd")
-			(uuid "6a0e24d3-4968-451b-b9f9-846b5344cbb4")
-		)
-		(fp_rect
-			(start -18.5 -9)
-			(end -11.5 9)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "f31212ac-6758-43ef-acb6-c92cf12fbb0d")
-		)
-		(fp_rect
-			(start -11.5 -10)
-			(end 11.5 10)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "6e94f094-cae9-4df5-954f-888c20caf640")
-		)
-		(pad "1" thru_hole circle
-			(at -20 2)
-			(size 1.5 1.5)
-			(drill 0.7)
-			(property pad_prop_testpoint)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "/VBAT")
-			(pinfunction "BAT+_1")
-			(pintype "passive")
-			(uuid "bd3a8ab6-78d1-4b99-b070-fb0279dfe117")
-		)
-		(pad "2" thru_hole circle
-			(at -20 -2)
-			(size 1.5 1.5)
-			(drill 0.7)
-			(property pad_prop_testpoint)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "GND")
-			(pinfunction "BAT-_2")
-			(pintype "passive")
-			(uuid "51314316-a8d4-4844-a552-564008323a24")
-		)
-		(embedded_fonts no)
-		(model "${KIPRJMOD}/packages3d/LiPo_LP802023_240mAh_8x20x23.step"
-			(offset
-				(xyz 0 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-	)
 	(footprint "Package_TO_SOT_SMD:SOT-23-3"
 		(layer "F.Cu")
 		(uuid "97135fca-10ee-44ca-a9e1-81df3e573558")
@@ -7104,6 +6867,249 @@
 		)
 		(embedded_fonts no)
 		(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "arrowstand:LiPo_LP802023_240mAh"
+		(layer "F.Cu")
+		(uuid "9e540b2f-3094-4926-9c89-34c787cd7600")
+		(at 140.325 95.275)
+		(descr "LiPo pouch cell LiPower LP802023 240 mAh 3.7 V, 8x20x23 mm, with protection PCB and 2 wires (24 AWG, 80 mm). The wires are cut to length and soldered into the two plated holes (pad 1 = BAT+ red, pad 2 = BAT- black); the cell is glued to the back side of the PCB.")
+		(property "Reference" "BT1"
+			(at -18.5 -4.25 0)
+			(layer "F.SilkS")
+			(uuid "4d93e1f8-60d4-41c9-b290-340942f83981")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "LiPo_LP802023_240mAh"
+			(at -18.5 4.25 0)
+			(layer "F.Fab")
+			(uuid "58627435-d2ed-4bfa-906a-df667fadc307")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.rcscomponents.kiev.ua/product/lipo-240-mah-3-7v-8x20x23mm-lipower-akumuliator-litii-polimernyi-lp802023_174469.html"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ee7fcc28-1318-4304-acb9-31120a026fc1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "LiPo pouch cell LiPower LP802023, 240 mAh 3.7 V, 8x20x23 mm, with protection PCB and 2 wires (24 AWG, 80 mm). Wires are cut and soldered into the two plated holes of the footprint (BAT+ = red, BAT- = black)."
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "62be8742-371f-4db9-83bf-2b63f3eaecc0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "BOM_Price" "53.50 UAH"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2e52998c-2038-4641-a3b9-d3a0f707b12e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "LP802023"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f189e25b-f0f3-4fe0-b09e-229fc70c20ba")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "LiPower"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "50b0a5b0-4cdc-49b7-9921-bdc0611f32ff")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/40cf491d-b642-4136-845f-2a06373c35fe")
+		(sheetname "/")
+		(sheetfile "arrow-stand-gen2.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -21.25 -2)
+			(end -18.75 -2)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "41677d70-0bd5-45c1-9823-6c22a59afe9c")
+		)
+		(fp_line
+			(start -21.25 2)
+			(end -18.75 2)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "525e2a8b-6527-4c5c-80be-d4448a9d468d")
+		)
+		(fp_line
+			(start -20 0.75)
+			(end -20 3.25)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3093c100-bb4f-4dc7-8e09-4884bf946c4a")
+		)
+		(fp_rect
+			(start -18.5 -9)
+			(end -11.5 9)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "e03a8b81-4c9d-4e62-bcec-643f0f7dbbf6")
+		)
+		(fp_rect
+			(start -11.5 -10)
+			(end 11.5 10)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "d7954553-7d14-42a3-ac02-8ff1d2f0e138")
+		)
+		(fp_rect
+			(start -18.5 -9)
+			(end -11.5 9)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.SilkS")
+			(uuid "bf3eb0dd-ae7d-4002-8151-fe6b4f752dfa")
+		)
+		(fp_rect
+			(start -11.5 -10)
+			(end 11.5 10)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.SilkS")
+			(uuid "4b75930e-30d9-4924-9ccb-996cadaa479c")
+		)
+		(fp_rect
+			(start -21.25 -10.25)
+			(end 11.75 10.25)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "89bfdcdd-a78e-4b3f-a9d1-167dedaa0ae7")
+		)
+		(fp_rect
+			(start -18.5 -9)
+			(end -11.5 9)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "9506ac31-1f3d-4bc8-bff5-4e360b75060b")
+		)
+		(fp_rect
+			(start -11.5 -10)
+			(end 11.5 10)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "27454870-3267-4e86-b9a5-76cd99db3adb")
+		)
+		(pad "1" thru_hole circle
+			(at -20 2)
+			(size 1.5 1.5)
+			(drill 0.7)
+			(property pad_prop_testpoint)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/VBAT")
+			(pinfunction "BAT+_1")
+			(pintype "passive")
+			(uuid "711e812c-59ed-469a-8047-244a7787b4fa")
+		)
+		(pad "2" thru_hole circle
+			(at -20 -2)
+			(size 1.5 1.5)
+			(drill 0.7)
+			(property pad_prop_testpoint)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "BAT-_2")
+			(pintype "passive")
+			(uuid "8a6456f3-cf97-40ac-965e-530dec6eb56f")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/packages3d/LiPo_LP802023_240mAh_8x20x23.step"
 			(offset
 				(xyz 0 0 0)
 			)

@@ -44,7 +44,7 @@ KICAD_CLI  ?= kicad-cli
 QTY   ?= 100
 
 .PHONY: help all firmware firmware-lint toolchain-check bom erc drc cost prices \
-        upgrade fmt-check libs libs-check lint clean snapshot hub-erc hub-drc
+        upgrade fmt-check libs libs-check check-3d lint clean snapshot hub-erc hub-drc
 
 help:
 	@echo "arrow-stand-gen2 — available targets"
@@ -61,6 +61,7 @@ help:
 	@echo "  make libs-check            check that the KiCad libraries match"
 	@echo "  make upgrade               upgrade KiCAD files to the newest format"
 	@echo "  make fmt-check             verify the KiCAD file format version"
+	@echo "  make check-3d              verify 3D models on placed footprints"
 
 all: firmware
 
@@ -150,6 +151,10 @@ cost: prices
 	python3 tools/cost_model.py --bom hardware/bom/bom-draft.csv --qty $(QTY) --check
 
 # --- Перевірки ----------------------------------------------------------
+
+# Чи є 3D-моделі у РОЗМІЩЕНИХ екземплярах обох PCB.
+check-3d:
+	python3 tools/check_3d_models.py
 
 lint: firmware-lint
 	@echo "lint OK"

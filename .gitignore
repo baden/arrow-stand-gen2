@@ -15,6 +15,11 @@ fp-info-cache
 *.kicad_sch-bak
 *.kicad_pro-bak
 
+# Тимчасові артефакти перевірок (kicad-cli sch erc / export netlist)
+erc_*.json
+*_check.net
+*_head_check.kicad_sch
+
 # --- Copperpour ---
 .copperpour/baselines/
 .copperpour/cache/

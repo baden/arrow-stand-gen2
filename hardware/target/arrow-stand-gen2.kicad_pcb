@@ -1583,7 +1583,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2201131730_Hosonic-Elec-E3SB32E00000KE_C1021665.pdf"
+		(property "Datasheet" "https://item.szlcsc.com/15866.html"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5771,7 +5771,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1809261820_TOPPOWER-Nanjing-Extension-Microelectronics-TP4056-42-ESOP8_C16581.pdf"
+		(property "Datasheet" "https://www.mornsun.cn/html/pdf/SCM1501B.html"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7357,7 +7357,7 @@
 		(placed yes)
 		(layer "F.Cu")
 		(uuid "c87fc945-1662-46df-91d3-717f10a5f972")
-		(at 135 91)
+		(at 132.5 88)
 		(descr "SMD rectangular pad as test Point, square 1.0mm side length")
 		(tags "test point SMD pad rectangle square")
 		(property "Reference" "TP5"
@@ -8105,7 +8105,7 @@
 		(descr "USB Type-C receptacle for USB 2.0 and PD, http://www.krhro.com/uploads/soft/180320/1-1P320120243.pdf")
 		(tags "usb usb-c 2.0 pd")
 		(property "Reference" "J3"
-			(at -34.7 -15.145 0)
+			(at 1 1.5 0)
 			(layer "F.SilkS")
 			(uuid "0e46cb19-8afa-4662-8583-9e54cfb92988")
 			(effects

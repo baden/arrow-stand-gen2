@@ -197,6 +197,25 @@ Copy-Item hardware\common\packages3d\USB_C_Receptacle_HRO_TYPE-C-31-M-12.step `
   "C:\Program Files\KiCad\10.0\share\kicad\3dmodels\Connector_USB.3dshapes\"
 ```
 
+### Оновлення копії футпрінта на платі
+
+Копія на платі (у `.kicad_pcb`) оновлюється **окремо** від бібліотеки:
+
+| Спосіб | Коли працює |
+|---|---|
+| KiCAD: Tools → Update Footprints from Library | завжди (штатний шлях) |
+| MCP: `update_footprints_from_library` | потрібен **відкритий PCB Editor**; застосування може відхилити з `BeginCommit without a document specified is not allowed when multiple editors are open` — тоді закрийте вкладку Schematic Editor (або весь KiCAD) і повторіть |
+
+Дві практичні деталі:
+
+1. Типовий refresh Copperpour **не підтримує** pad-властивості
+   (`pad_prop_testpoint` тощо) і повертає
+   `unsupported_library_footprint` — такі властивості треба прибрати з
+   бібліотечного футпринта (у нас їх уже немає).
+2. `place_component`/`delete_component` уміють редагувати закриту плату
+   напряму, але **не знають** ні про зв'язок із символом схеми, ні про
+   мережі — після них потрібна повна синхронізація зі схемою.
+
 ### Чому vendor-моделі не вдалося поставити
 
 | Джерело | Результат |

@@ -2314,6 +2314,163 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "arrowstand:BT1_LiPo_LP802023"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "BT"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LiPo_LP802023_240mAh"
+				(at 0 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "arrowstand:LiPo_LP802023_240mAh"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.rcscomponents.kiev.ua/product/lipo-240-mah-3-7v-8x20x23mm-lipower-akumuliator-litii-polimernyi-lp802023_174469.html"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "LiPo pouch cell LiPower LP802023, 240 mAh 3.7 V, 8x20x23 mm, with protection PCB and 2 wires (24 AWG, 80 mm). Wires are cut and soldered into the two plated holes of the footprint (BAT+ = red, BAT- = black)."
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "BOM_Price" "53.50 UAH"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "LP802023"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "LiPower"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "LiPo lithium polymer battery 240mAh 3.7V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "BT1_LiPo_LP802023_0_1"
+				(rectangle
+					(start -5.08 -6.35)
+					(end 5.08 6.35)
+					(stroke
+						(width 0.12)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 180)
+					(length 2.54)
+					(name "BAT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 180)
+					(length 2.54)
+					(name "BAT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "arrowstand:CH32V203C8U6"
 			(pin_names
 				(offset 1.016)
@@ -5706,163 +5863,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "arrowstand:BT1_LiPo_LP802023"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "BT"
-				(at 0 8.8900 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LiPo_LP802023_240mAh"
-				(at 0 -8.8900 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "arrowstand:LiPo_LP802023_240mAh"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.rcscomponents.kiev.ua/product/lipo-240-mah-3-7v-8x20x23mm-lipower-akumuliator-litii-polimernyi-lp802023_174469.html"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "LiPo pouch cell LiPower LP802023, 240 mAh 3.7 V, 8x20x23 mm, with protection PCB and 2 wires (24 AWG, 80 mm). Wires are cut and soldered into the two plated holes of the footprint (BAT+ = red, BAT- = black)."
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "BOM_Price" "53.50 UAH"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" "LP802023"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "LiPower"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "LiPo lithium polymer battery 240mAh 3.7V"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "BT1_LiPo_LP802023_0_1"
-				(rectangle
-					(start -5.08 -6.35)
-					(end 5.08 6.35)
-					(stroke
-						(width 0.12)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 180)
-					(length 2.54)
-					(name "BAT+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 180)
-					(length 2.54)
-					(name "BAT-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(junction
 		(at 129.54 53.34)
@@ -5913,7 +5913,7 @@
 		(uuid "792d65ca-c51a-4e82-9f85-755cec5dd875")
 	)
 	(junction
-		(at 154.94 137.16)
+		(at 166.37 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "87194d02-944c-46b8-99a7-1abd60844ac9")
@@ -6106,6 +6106,17 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 48.26)
+			(xy 50.8 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0443410b-a85c-436c-96d1-8852a05c2929")
+	)
+	(wire
+		(pts
 			(xy 240.03 55.88)
 			(xy 240.03 46.99)
 		)
@@ -6172,6 +6183,17 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 147.32)
+			(xy 99.06 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1630f71a-72d7-4291-a3bb-e06005cfd73d")
+	)
+	(wire
+		(pts
 			(xy 220.98 142.24)
 			(xy 236.22 142.24)
 		)
@@ -6180,6 +6202,17 @@
 			(type default)
 		)
 		(uuid "18291096-f13c-48dd-af63-b935e0b5a59f")
+	)
+	(wire
+		(pts
+			(xy 55.88 45.72)
+			(xy 50.8 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1900866c-8456-4d61-beb1-2603a4080196")
 	)
 	(wire
 		(pts
@@ -6194,8 +6227,8 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 137.16)
-			(xy 154.94 143.51)
+			(xy 166.37 137.16)
+			(xy 166.37 138.43)
 		)
 		(stroke
 			(width 0)
@@ -6326,8 +6359,8 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 40.64)
-			(xy 62.23 38.1)
+			(xy 60.96 40.64)
+			(xy 60.96 38.1)
 		)
 		(stroke
 			(width 0)
@@ -6426,7 +6459,7 @@
 	(wire
 		(pts
 			(xy 226.06 78.74)
-			(xy 254 78.74)
+			(xy 259.08 78.74)
 		)
 		(stroke
 			(width 0)
@@ -6436,8 +6469,8 @@
 	)
 	(wire
 		(pts
-			(xy 254 78.74)
-			(xy 254 86.36)
+			(xy 259.08 78.74)
+			(xy 259.08 87.63)
 		)
 		(stroke
 			(width 0)
@@ -6469,17 +6502,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 86.36)
-			(xy 259.08 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44556a9f-85c6-422d-aeec-80790eaaede5")
-	)
-	(wire
-		(pts
 			(xy 114.3 149.86)
 			(xy 99.06 149.86)
 		)
@@ -6502,17 +6524,6 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 38.1)
-			(xy 50.8 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "489beca3-78fa-4c09-a367-e0aa3aa7abe9")
-	)
-	(wire
-		(pts
 			(xy 208.28 25.4)
 			(xy 218.44 25.4)
 		)
@@ -6521,6 +6532,17 @@
 			(type default)
 		)
 		(uuid "49eea2cd-9895-49ee-a57f-ade21868e81c")
+	)
+	(wire
+		(pts
+			(xy 55.88 43.18)
+			(xy 50.8 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4eb309cd-4635-4a25-afbe-24a9948055d2")
 	)
 	(wire
 		(pts
@@ -6667,7 +6689,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 137.16)
+			(xy 166.37 137.16)
 			(xy 172.72 137.16)
 		)
 		(stroke
@@ -6697,17 +6719,6 @@
 			(type default)
 		)
 		(uuid "74e66072-468e-4b03-a0f4-2e9161a5b658")
-	)
-	(wire
-		(pts
-			(xy 254 86.36)
-			(xy 259.08 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "763cb10d-f84b-4ddb-84a9-93dde1973dff")
 	)
 	(wire
 		(pts
@@ -6975,8 +6986,8 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 137.16)
-			(xy 154.94 137.16)
+			(xy 162.56 137.16)
+			(xy 166.37 137.16)
 		)
 		(stroke
 			(width 0)
@@ -7031,7 +7042,7 @@
 	(wire
 		(pts
 			(xy 50.8 35.56)
-			(xy 63.5 35.56)
+			(xy 62.23 35.56)
 		)
 		(stroke
 			(width 0)
@@ -7096,14 +7107,36 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 41.91)
-			(xy 142.24 41.91)
+			(xy 139.7 36.83)
+			(xy 146.05 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c57647d0-a15b-40c0-92ec-e2b5e7565f55")
+	)
+	(wire
+		(pts
+			(xy 140.97 180.34)
+			(xy 154.94 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c583db0b-ecf9-4017-9af8-b3cf14d4fc15")
+	)
+	(wire
+		(pts
+			(xy 55.88 50.8)
+			(xy 50.8 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5f813ff-f381-4eb0-b499-80142717a124")
 	)
 	(wire
 		(pts
@@ -7118,8 +7151,8 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 41.91)
-			(xy 142.24 39.37)
+			(xy 146.05 36.83)
+			(xy 146.05 34.29)
 		)
 		(stroke
 			(width 0)
@@ -7195,6 +7228,17 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 38.1)
+			(xy 60.96 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d86e0094-d82d-4949-abc7-f0195a98a81d")
+	)
+	(wire
+		(pts
 			(xy 33.02 132.08)
 			(xy 45.72 132.08)
 		)
@@ -7206,8 +7250,8 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 40.64)
 			(xy 62.23 40.64)
-			(xy 63.5 40.64)
 		)
 		(stroke
 			(width 0)
@@ -7347,9 +7391,9 @@
 		)
 		(uuid "f45f7bc5-3d9d-4364-b7cd-09245ac514bc")
 	)
-	(text "MECHANICAL"
+	(text "BAT"
 		(exclude_from_sim no)
-		(at 137.16 170.18 0)
+		(at 146.05 169.926 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7360,7 +7404,7 @@
 	)
 	(text "3.3V POWER"
 		(exclude_from_sim no)
-		(at 136.652 122.174 0)
+		(at 146.812 122.936 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7543,6 +7587,16 @@
 		)
 		(uuid "28289b7d-233c-4a96-b55b-330091a7eed6")
 	)
+	(label "VBAT"
+		(at 140.97 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "28568e09-56f6-4ec6-91fd-6701be875220")
+	)
 	(label "XTAL_A"
 		(at 175.26 30.48 0)
 		(effects
@@ -7552,16 +7606,6 @@
 			(justify left bottom)
 		)
 		(uuid "32332718-1737-4181-8073-bee951407a1d")
-	)
-	(label "CC1"
-		(at 50.8 35.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "36624d55-76c5-46c6-8379-c863ef6b9f32")
 	)
 	(label "ANT_RF"
 		(at 260.35 55.88 0)
@@ -7602,16 +7646,6 @@
 			(justify right bottom)
 		)
 		(uuid "41b4bd76-7521-4a73-8a5c-5b6adc44ec01")
-	)
-	(label "CC2"
-		(at 54.61 38.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "42dc3a6b-3b94-4bed-b7f4-21ec8b18a64b")
 	)
 	(label "RFO"
 		(at 229.87 58.42 0)
@@ -7784,12 +7818,12 @@
 		(uuid "792a3d0c-22c5-4a8c-9d1f-6a36fceec292")
 	)
 	(label "D-"
-		(at 50.8 45.72 0)
+		(at 55.88 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "7a368b3f-d837-43ea-a62e-1a7578940f9d")
 	)
@@ -7814,12 +7848,12 @@
 		(uuid "87460f98-0fe4-4377-b637-40ae1e455352")
 	)
 	(label "D-"
-		(at 50.8 43.18 0)
+		(at 55.88 43.18 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "8e9c4ec6-ee21-4063-90ea-3d03ad994404")
 	)
@@ -7894,7 +7928,7 @@
 		(uuid "a41052fc-a3a0-450c-8284-99c284aa5f36")
 	)
 	(label "VBAT"
-		(at 151.13 137.16 0)
+		(at 162.56 137.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7954,22 +7988,22 @@
 		(uuid "bb7fc6a8-d2ec-45d3-8839-f232f00191cc")
 	)
 	(label "D+"
-		(at 50.8 50.8 0)
+		(at 55.88 50.8 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "c17df64c-7eca-4946-a4ad-0af6be8bc377")
 	)
 	(label "VBAT_DIV_EN"
-		(at 99.06 147.32 0)
+		(at 114.3 147.32 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "c1aad479-a53f-4036-bfff-6063a23aac4c")
 	)
@@ -8064,12 +8098,12 @@
 		(uuid "e4dc2dcf-072a-41c0-b663-8f58229aa55e")
 	)
 	(label "D+"
-		(at 50.8 48.26 0)
+		(at 55.88 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "e50afb05-39d5-4fb7-89da-38910905fefc")
 	)
@@ -8094,7 +8128,7 @@
 		(uuid "eaa1e2d3-e00f-476f-8415-2d73b3f35c89")
 	)
 	(label "VBAT"
-		(at 142.24 41.91 0)
+		(at 146.05 36.83 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8123,15 +8157,25 @@
 		)
 		(uuid "fb64a8cc-10ae-4c68-a1fc-31ca984ba6f0")
 	)
-	(label "VBAT"
-		(at 224.79 162.56 0)
+	(label "CC1"
+		(at 50.8 35.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "28568e09-56f6-4ec6-91fd-6701be875220")
+		(uuid "8385be95-af38-408d-b622-c5f4a08bb8ea")
+	)
+	(label "CC2"
+		(at 50.8 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "93c00344-117f-42a2-bcc1-dc3e25d11b38")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -8326,7 +8370,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 67.31 40.64 90)
+		(at 66.04 40.64 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8336,7 +8380,7 @@
 		(dnp no)
 		(uuid "0be4fbd4-6f44-4070-b3d9-380f5397a4b0")
 		(property "Reference" "R8"
-			(at 65.024 43.434 90)
+			(at 63.754 43.434 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8346,7 +8390,7 @@
 			)
 		)
 		(property "Value" "5.1k"
-			(at 69.85 43.434 90)
+			(at 68.58 43.434 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8356,7 +8400,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 67.31 40.64 0)
+			(at 66.04 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8367,7 +8411,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF5101TCE_C25905.pdf"
-			(at 67.31 40.64 0)
+			(at 66.04 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8378,7 +8422,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 67.31 40.64 0)
+			(at 66.04 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8389,7 +8433,7 @@
 			)
 		)
 		(property "LCSC" "C25905"
-			(at 67.31 40.64 0)
+			(at 66.04 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8400,7 +8444,7 @@
 			)
 		)
 		(property "MPN" "0402WGF5101TCE"
-			(at 67.31 40.64 0)
+			(at 66.04 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8411,7 +8455,7 @@
 			)
 		)
 		(property "Manufacturer" "Uni Royal"
-			(at 67.31 40.64 0)
+			(at 66.04 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8422,7 +8466,7 @@
 			)
 		)
 		(property "Note" "USB-C CC pull-down 5k1"
-			(at 67.31 40.64 0)
+			(at 66.04 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9194,7 +9238,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 67.31 35.56 90)
+		(at 66.04 35.56 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -9205,7 +9249,7 @@
 		(dnp no)
 		(uuid "24365a88-61d8-4a49-89ce-f8dbebef782d")
 		(property "Reference" "R7"
-			(at 65.532 32.512 90)
+			(at 64.262 32.512 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9215,7 +9259,7 @@
 			)
 		)
 		(property "Value" "5.1k"
-			(at 70.866 32.258 90)
+			(at 69.596 32.258 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9225,7 +9269,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 67.31 35.56 0)
+			(at 66.04 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9236,7 +9280,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF5101TCE_C25905.pdf"
-			(at 67.31 35.56 0)
+			(at 66.04 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9247,7 +9291,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 67.31 35.56 0)
+			(at 66.04 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9258,7 +9302,7 @@
 			)
 		)
 		(property "LCSC" "C25905"
-			(at 67.31 35.56 0)
+			(at 66.04 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9269,7 +9313,7 @@
 			)
 		)
 		(property "MPN" "0402WGF5101TCE"
-			(at 67.31 35.56 0)
+			(at 66.04 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9280,7 +9324,7 @@
 			)
 		)
 		(property "Manufacturer" "Uni Royal"
-			(at 67.31 35.56 0)
+			(at 66.04 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9291,7 +9335,7 @@
 			)
 		)
 		(property "Note" "USB-C CC pull-down 5k1"
-			(at 67.31 35.56 0)
+			(at 66.04 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10131,7 +10175,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 135.89 41.91 0)
+		(at 139.7 36.83 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10141,7 +10185,7 @@
 		(dnp no)
 		(uuid "3c7a5597-ffeb-4817-b512-795530a8dbba")
 		(property "Reference" "#PWR043"
-			(at 135.89 40.005 0)
+			(at 139.7 34.925 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10152,7 +10196,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 135.89 38.1 0)
+			(at 139.7 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10162,7 +10206,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 135.89 41.91 0)
+			(at 139.7 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10173,7 +10217,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 41.91 0)
+			(at 139.7 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10184,7 +10228,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 135.89 41.91 0)
+			(at 139.7 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10313,6 +10357,118 @@
 			(project "arrow-stand-gen2"
 				(path "/02910956-42f7-4430-bd24-4de1ea18d15b"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "arrowstand:BT1_LiPo_LP802023")
+		(at 160.02 182.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "40cf491d-b642-4136-845f-2a06373c35fe")
+		(property "Reference" "BT1"
+			(at 160.02 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LiPo_LP802023_240mAh"
+			(at 160.02 191.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "arrowstand:LiPo_LP802023_240mAh"
+			(at 160.02 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.rcscomponents.kiev.ua/product/lipo-240-mah-3-7v-8x20x23mm-lipower-akumuliator-litii-polimernyi-lp802023_174469.html"
+			(at 160.02 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "LiPo pouch cell LiPower LP802023, 240 mAh 3.7 V, 8x20x23 mm, with protection PCB and 2 wires (24 AWG, 80 mm). Wires are cut and soldered into the two plated holes of the footprint (BAT+ = red, BAT- = black)."
+			(at 160.02 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "BOM_Price" "53.50 UAH"
+			(at 160.02 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LP802023"
+			(at 160.02 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "LiPower"
+			(at 160.02 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e3037923-c4fb-4eb5-bc3d-e327339a68f5")
+		)
+		(pin "1"
+			(uuid "9d7ba3d0-b4ee-48d6-b382-f26598921801")
+		)
+		(instances
+			(project "arrow-stand-gen2"
+				(path "/02910956-42f7-4430-bd24-4de1ea18d15b"
+					(reference "BT1")
 					(unit 1)
 				)
 			)
@@ -11140,7 +11296,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 154.94 147.32 0)
+		(at 166.37 142.24 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11150,7 +11306,7 @@
 		(dnp no)
 		(uuid "69289edf-07cc-448a-94f0-b11e0a7dde85")
 		(property "Reference" "C6"
-			(at 155.575 144.78 0)
+			(at 167.005 139.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11161,7 +11317,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 155.575 149.86 0)
+			(at 167.005 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11172,7 +11328,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 154.94 147.32 0)
+			(at 166.37 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11183,7 +11339,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 147.32 0)
+			(at 166.37 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11194,7 +11350,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 154.94 147.32 0)
+			(at 166.37 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11205,7 +11361,7 @@
 			)
 		)
 		(property "LCSC" "C52923"
-			(at 154.94 147.32 0)
+			(at 166.37 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11216,7 +11372,7 @@
 			)
 		)
 		(property "MPN" "CL05A105KA5NQNC"
-			(at 154.94 147.32 0)
+			(at 166.37 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11227,7 +11383,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 154.94 147.32 0)
+			(at 166.37 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12219,7 +12375,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 71.12 40.64 90)
+		(at 69.85 40.64 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12229,7 +12385,7 @@
 		(dnp no)
 		(uuid "86996b49-bbbd-4783-841a-eb960b92b86f")
 		(property "Reference" "#PWR035"
-			(at 77.47 40.64 0)
+			(at 76.2 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12240,7 +12396,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 74.93 40.64 0)
+			(at 73.66 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12250,7 +12406,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 71.12 40.64 0)
+			(at 69.85 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12261,7 +12417,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 71.12 40.64 0)
+			(at 69.85 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12272,7 +12428,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 71.12 40.64 0)
+			(at 69.85 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13531,6 +13687,83 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 154.94 185.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a34625f7-eba2-4fb4-bb2b-345f27649a9e")
+		(property "Reference" "#PWR044"
+			(at 154.94 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 189.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 154.94 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0acaaef5-4bff-4a3b-855d-0b802b64ca26")
+		)
+		(instances
+			(project "arrow-stand-gen2"
+				(path "/02910956-42f7-4430-bd24-4de1ea18d15b"
+					(reference "#PWR044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 33.02 182.88 90)
 		(unit 1)
 		(body_style 1)
@@ -13608,7 +13841,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 71.12 35.56 90)
+		(at 69.85 35.56 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13618,7 +13851,7 @@
 		(dnp no)
 		(uuid "bdb3cc9f-1ef7-4911-ba62-31665c17f166")
 		(property "Reference" "#PWR034"
-			(at 77.47 35.56 0)
+			(at 76.2 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13629,7 +13862,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 74.93 35.56 0)
+			(at 73.66 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13639,7 +13872,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 71.12 35.56 0)
+			(at 69.85 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13650,7 +13883,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 71.12 35.56 0)
+			(at 69.85 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13661,7 +13894,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 71.12 35.56 0)
+			(at 69.85 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14180,7 +14413,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 154.94 151.13 0)
+		(at 166.37 146.05 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14190,7 +14423,7 @@
 		(dnp no)
 		(uuid "c2c8c4e1-a1df-413f-8968-5469ddc896e6")
 		(property "Reference" "#PWR024"
-			(at 154.94 157.48 0)
+			(at 166.37 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14201,7 +14434,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 154.94 154.94 0)
+			(at 166.37 149.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14211,7 +14444,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 151.13 0)
+			(at 166.37 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14222,7 +14455,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 151.13 0)
+			(at 166.37 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14233,7 +14466,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 154.94 151.13 0)
+			(at 166.37 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15294,7 +15527,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Small")
-		(at 142.24 39.37 0)
+		(at 146.05 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15304,7 +15537,7 @@
 		(dnp no)
 		(uuid "eab39384-a1cf-490d-8e49-f8f7e29cc43e")
 		(property "Reference" "TP5"
-			(at 142.24 37.338 0)
+			(at 146.05 32.258 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15314,7 +15547,7 @@
 			)
 		)
 		(property "Value" "BAT+"
-			(at 142.24 44.45 0)
+			(at 146.05 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15324,7 +15557,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 142.24 39.37 0)
+			(at 146.05 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15335,7 +15568,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 39.37 0)
+			(at 146.05 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15346,7 +15579,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 142.24 39.37 0)
+			(at 146.05 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15357,7 +15590,7 @@
 			)
 		)
 		(property "Note" "LiPo soldered directly to these pads"
-			(at 142.24 39.37 0)
+			(at 146.05 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15928,154 +16161,6 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "arrowstand:BT1_LiPo_LP802023")
-		(at 229.87 165.1 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "40cf491d-b642-4136-845f-2a06373c35fe")
-		(property "Reference" "BT1"
-			(at 229.87 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LiPo_LP802023_240mAh"
-			(at 229.87 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "arrowstand:LiPo_LP802023_240mAh"
-			(at 229.87 165.1 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.rcscomponents.kiev.ua/product/lipo-240-mah-3-7v-8x20x23mm-lipower-akumuliator-litii-polimernyi-lp802023_174469.html"
-			(at 229.87 165.1 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "LiPo pouch cell LiPower LP802023, 240 mAh 3.7 V, 8x20x23 mm, with protection PCB and 2 wires (24 AWG, 80 mm). Wires are cut and soldered into the two plated holes of the footprint (BAT+ = red, BAT- = black)."
-			(at 229.87 165.1 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "BOM_Price" "53.50 UAH"
-			(at 229.87 165.1 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "LP802023"
-			(at 229.87 165.1 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "LiPower"
-			(at 229.87 165.1 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "arrow-stand-gen2"
-				(path "/02910956-42f7-4430-bd24-4de1ea18d15b"
-					(reference "BT1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 224.79 167.64 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a34625f7-eba2-4fb4-bb2b-345f27649a9e")
-		(property "Reference" "#PWR044"
-			(at 224.79 173.99 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 224.79 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 224.79 167.64 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 224.79 167.64 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 224.79 167.64 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "arrow-stand-gen2"
-				(path "/02910956-42f7-4430-bd24-4de1ea18d15b"
-					(reference "#PWR044")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(rectangle
 		(start 15.24 15.24)
 		(end 154.94 81.28)
@@ -16089,7 +16174,7 @@
 		(uuid "2da3e297-180c-44e8-807a-ccfed35d8167")
 	)
 	(rectangle
-		(start 134.62 119.38)
+		(start 144.78 119.38)
 		(end 212.09 162.814)
 		(stroke
 			(width 0)
@@ -16102,7 +16187,7 @@
 	)
 	(rectangle
 		(start 15.24 87.884)
-		(end 131.572 193.04)
+		(end 139.7 193.04)
 		(stroke
 			(width 0)
 			(type dash)
@@ -16125,7 +16210,7 @@
 		(uuid "d0ae2592-79cd-4466-8257-4019230b8cb4")
 	)
 	(rectangle
-		(start 135.128 167.386)
+		(start 144.78 167.386)
 		(end 172.72 193.04)
 		(stroke
 			(width 0)

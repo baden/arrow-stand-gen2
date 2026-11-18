@@ -1963,9 +1963,10 @@
 		)
 	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "38c5bdaa-9899-41d4-937c-8467c965af74")
-		(at 149 96 90)
+		(at 130 99 90)
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C9"
@@ -2728,9 +2729,10 @@
 		(embedded_fonts no)
 	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "43f6cd3c-2cda-42ad-a36e-3ef84ef9362e")
-		(at 148 86)
+		(at 140 86)
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C13"
@@ -4229,9 +4231,10 @@
 		)
 	)
 	(footprint "Resistor_SMD:R_0805_2012Metric"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "6deb9bdd-3d2c-4a0b-98fc-f5f99a3815f8")
-		(at 146 95)
+		(at 139 102)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R3"
@@ -5188,9 +5191,10 @@
 		)
 	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "7c61064e-e32f-483d-a7b1-8d0ff1946373")
-		(at 145 90)
+		(at 140 84)
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C14"
@@ -5640,7 +5644,7 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "84041068-dee4-4d8e-8966-fd8bd0a8efd1")
-		(at 125 100)
+		(at 127 102)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q1"
@@ -6456,7 +6460,7 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23-3"
 		(layer "F.Cu")
 		(uuid "97135fca-10ee-44ca-a9e1-81df3e573558")
-		(at 125.12 95.55)
+		(at 148.8625 96)
 		(descr "SOT, 3 Pin (JEDEC MO-178 inferred 3-pin variant https://www.jedec.org/document_search?search_api_views_fulltext=MO-178)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U4"
@@ -6875,9 +6879,10 @@
 		)
 	)
 	(footprint "TestPoint:TestPoint_Pad_1.0x1.0mm"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "a0c3f0f1-3435-40a2-ab71-357d5ee726bb")
-		(at 123 105)
+		(at 130 102)
 		(descr "SMD rectangular pad as test Point, square 1.0mm side length")
 		(tags "test point SMD pad rectangle square")
 		(property "Reference" "TP2"
@@ -7650,9 +7655,10 @@
 		)
 	)
 	(footprint "TestPoint:TestPoint_Pad_1.0x1.0mm"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "c87fc945-1662-46df-91d3-717f10a5f972")
-		(at 124 90)
+		(at 131 105)
 		(descr "SMD rectangular pad as test Point, square 1.0mm side length")
 		(tags "test point SMD pad rectangle square")
 		(property "Reference" "TP5"
@@ -7831,9 +7837,10 @@
 		(embedded_fonts no)
 	)
 	(footprint "arrowstand:LiPo_LP802023_240mAh"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "c9e71f45-6d1e-46c5-a3e1-f725a2c72e6e")
-		(at 135 88.675 90)
+		(at 124 74 90)
 		(descr "LiPo pouch cell LiPower LP802023 240 mAh 3.7 V, 8x20x23 mm, with protection PCB and 2 wires (24 AWG, 80 mm). The wires are cut to length and soldered into the two plated holes (pad 1 = BAT+ red, pad 2 = BAT- black); the cell is glued to the back side of the PCB.")
 		(property "Reference" "BT1"
 			(at -18.5 -4.25 90)
@@ -8272,9 +8279,10 @@
 		)
 	)
 	(footprint "TestPoint:TestPoint_Pad_1.0x1.0mm"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "e32b8d68-4340-4b2d-a759-c598af31aa80")
-		(at 148 92)
+		(at 143 85)
 		(descr "SMD rectangular pad as test Point, square 1.0mm side length")
 		(tags "test point SMD pad rectangle square")
 		(property "Reference" "TP1"
@@ -8440,9 +8448,10 @@
 		(embedded_fonts no)
 	)
 	(footprint "Resistor_SMD:R_0805_2012Metric"
+		(placed yes)
 		(layer "F.Cu")
 		(uuid "f32d6cd7-e4d7-4558-b264-bb30360bdd22")
-		(at 147 104)
+		(at 134 102)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R2"
@@ -9330,8 +9339,8 @@
 		(uuid "3171c4b4-ffb5-41b0-ac45-86b8999ba7c8")
 	)
 	(gr_rect
-		(start 120 75)
-		(end 150 115)
+		(start 125 75)
+		(end 145 115)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -9345,7 +9354,7 @@
 		(layer "Dwgs.User")
 		(uuid "d561d82d-4d72-4bd5-9d45-37b7964a4f6b")
 		(pts
-			(xy 120 75) (xy 150 75)
+			(xy 125 75) (xy 145 75)
 		)
 		(height -5)
 		(orientation 0)
@@ -9366,7 +9375,7 @@
 			(extension_offset 0.5)
 			(keep_text_aligned yes)
 		)
-		(gr_text "30"
+		(gr_text "20"
 			(at 135 68.85 0)
 			(layer "Dwgs.User")
 			(uuid "d561d82d-4d72-4bd5-9d45-37b7964a4f6b")

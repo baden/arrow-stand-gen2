@@ -1,0 +1,27 @@
+# Нормалізація переводів рядків: у репозиторії зберігаємо LF,
+# у робочій копії — теж LF (KiCAD, Python, C це не важливо, зате
+# дифи не засміються переводами на Windows).
+* text=auto eol=lf
+
+# KiCAD-файли: завжди LF, як робить сам KiCAD на всіх платформах.
+*.kicad_sch text eol=lf
+*.kicad_pcb text eol=lf
+*.kicad_pro text eol=lf
+*.kicad_sym text eol=lf
+*.kicad_mod text eol=lf
+*.kicad_prl text eol=lf
+fp-lib-table text eol=lf
+sym-lib-table text eol=lf
+
+# Код і документація
+*.c text eol=lf
+*.h text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.ld text eol=lf
+Makefile text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.editorconfig text eol=lf

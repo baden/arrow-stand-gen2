@@ -159,6 +159,21 @@ void hal_exti_enable(hal_gpio_t pin, uint8_t rising, uint8_t falling);
 void hal_enter_deep_sleep(hal_sleep_mode_t mode, uint32_t wake_ms);
 
 /**
+ * @brief  Put the internal voltage regulator into low-power mode.
+ *
+ * The CH32V203 has three regulator modes (DS V3.0, 2.5.5): ON, Low-power and
+ * OFF. In Stop mode the regulator must be switched to **Low-power**, otherwise
+ * the core draws 70.5 uA instead of 10.5 uA. Standby switches it off
+ * automatically.
+ *
+ * Call this right before hal_enter_deep_sleep(HAL_SLEEP_STOP, ...) and undo
+ * it after the wake-up.
+ *
+ * @param  enable Non-zero to select low-power mode.
+ */
+void hal_set_regulator_low_power(uint8_t enable);
+
+/**
  * @brief  Enable or disable the USB full-speed device (hub variant only).
  * @param  enable Non-zero to enable.
  * @return 0 on success.

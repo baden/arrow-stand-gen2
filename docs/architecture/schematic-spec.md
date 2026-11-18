@@ -1,7 +1,9 @@
 # Специфікація схеми — arrow-stand-gen2 (варіант «мішень»)
 
-> Статус: **v1.3** · 2026-11-18 · **синхронізовано зі збудованою схемою**
+> Статус: **v1.4** · 2026-11-18 · **синхронізовано зі збудованою схемою**
 > (MCU замінено на CH32V203C8U6 — ADR-0011; див. §5)
+> Живлення перероблено за ADR-0014: LDO з мікрострумом, CE↔VIN, перемикання
+> дільника батареї — див. §2, §6 та `docs/manufacturing/power-budget.md`
 > `hardware/target/arrow-stand-gen2.kicad_sch` (ERC 0/0, orphans 0, shorts 0,
 > 38 компонентів, 28 мереж).
 > Це канон: будь-який вихід за специфікацію — тільки з ADR.
@@ -16,9 +18,11 @@
 
 | Мережа | Джерело | Споживачі |
 |---|---|---|
-| `VBAT` | LiPo+ на TP5 (3.7 В, 4.2 В max) | TP4056 BAT, LDO IN, EN-резистор, дільник батареї |
+| `VBAT` | LiPo+ на TP5 (3.7 В, 4.2 В max) | TP4056 BAT, LDO IN, дільник батареї (через Q1) |
 | `VCC_3V3` | LDO ME6211C33M5G-N OUT | SX1262 (VDD_IN, VBAT, VBAT_IO), CH32V203 (VDD), SC7A20 (VDD), pull-ups |
 | `CHG_IN` | USB-C VBUS (4 контакти A4/A9/B4/B9) | TP4056 VCC |
+| `VBAT_ADC` | дільник батареї R2/R3 | PA1 (ADC1), C11 |
+| `VBAT_DIV_EN` | Q1.gate (PA10) | перемикач дільника батареї |
 | `GND` | — | все |
 
 ## 2. Список деталей (38 позицій у схемі)
@@ -26,22 +30,24 @@
 | Ref | Деталь | LCSC | Значення | Корпус | Примітка |
 |---|---|---|---|---|---|
 | U1 | SX1262IMLTRT | C191341 | — | QFN-24-EP 4×4 | LoRa TX, +22 dBm, 433 МГц |
-| U2 | CH32V203F8U6 | C7570477 | — | QFN-20 3×3 | 64 KB Flash / 20 KB SRAM / 144 МГц |
+| U2 | CH32V203C8U6 | C6407762 | — | TQFN-48 7×7 | 64 KB Flash / 20 KB SRAM / 144 МГц, USB FS (ADR-0011) |
 | U3 | SC7A20HTR | C19274408 | — | LGA-12 2×2 | ±16 g, SPI, INT1 |
-| U4 | ME6211C33M5G-N | C82942 | 3.3 В / 500 мА | SOT-23-5 | LDO з EN |
+| U4 | XC6206P332MR | C2897477 | 3.3 В / 300 мА | SOT-23-3 | LDO, Iq 8 мкА, без CE (ADR-0014) |
 | U5 | TP4056-42-ESOP8 | C16581 | — | ESOP-8 | заряд LiPo 1 А |
 | Y1 | E3SB32E00000KE | C1021665 | 32 МГц, CL 12 pF | SMD3225-4P | такт SX1262 |
 | L1 | LQW15AN56NG80D | C1330587 | **56 нГ** | 0402 | choke VR_PA, 340 мА |
 | J1 | M2-SMA-42M | C55608210 | SMA | edge-mount | антенний вхід |
 | J3 | TYPE-C-31-M-12 | C165948 | USB-C 16P | SMD | зарядка (лише живлення) |
-| R1 | 0805W8F1003T5E | C149504 | 100 кОм | 0805 | pull-up NRST |
-| R2, R3 | 0805W8F1003T5E | C149504 | 100 кОм | 0805 | дільник батареї |
-| R4 | 0402WGF1002TCE | C25744 | 10 кОм | 0402 | VBAT → EN LDO |
+| ~~R1~~ | — | — | — | — | **видалено** (ADR-0014): SX1262 має внутрішній pull-up NRESET |
+| R2, R3 | 0805W8F2202T5E | C17560 | 22 кОм | 0805 | дільник батареї, гілка під Q1 (ADR-0014) |
+| ~~R4~~ | — | — | — | — | **видалено** (ADR-0014): CE з'єднано з VIN |
+| Q1 | 2N7002 | C8545 | — | SOT-23 | перемикач дільника батареї, gate ← PA10 |
 | R6 | 0402WGF1002TCE | C25744 | 10 кОм | 0402 | PROG TP4056 → 100 мА |
 | R7, R8 | 0402WGF5101TCE | C25905 | 5.1 кОм | 0402 | USB-C CC pull-down |
 | SW1 | B3U-1000P | C231329 | — | SMD | **DNP** (ADR-0010) |
 | R5 | 0402WGF1002TCE | C25744 | 10 кОм | 0402 | **DNP** разом із SW1 |
-| C1, C5, C8–C11, C13 | CL05B104KO5NNNC | C1525 | 100 нФ | 0402 | bypass |
+| C1, C5, C8–C10, C13 | CL05B104KO5NNNC | C1525 | 100 нФ | 0402 | bypass |
+| C11 | CL05B103KB5NNNC | C15195 | 10 нФ | 0402 | фільтр ADC дільника (ADR-0014) |
 | C2 | CL21A106KAYNNNE | C15850 | 10 мкФ | 0805 | VDDA SX1262 |
 | C3, C4 | 0402CG120J500NT | C1547 | 12 пФ | 0402 | кристал |
 | C6, C7, C14, C15 | CL05A105KA5NQNC | C52923 | 1 мкФ | 0402 | LDO / VR_PA / VREG |
@@ -69,7 +75,7 @@
 | 12 | DIO2 | NC | TXEN/RXEN зовнішнього RF-комутатора — немає |
 | 13 | DIO1 | `DIO1_RADIO` | IRQ TxDone |
 | 14 | BUSY | `BUSY_RADIO` | poll перед командою |
-| 15 | NRESET | `NRST_RADIO` | GPIO + R1 100 кОм + C10 100 нФ |
+| 15 | NRESET | `NRST_RADIO` | GPIO + C10 100 нФ; **зовнішній pull-up не потрібен** — SX1262 має внутрішній 50 кОм (ADR-0014) |
 | 16 | MISO | `SPI1_MISO` | |
 | 17 | MOSI | `SPI1_MOSI` | |
 | 18 | SCK | `SPI1_SCK` | |
@@ -155,8 +161,8 @@ EasyEDA для CH32V203C8U6.
 |---|---|
 | TP5 / TP6 | акумулятор LiPo 1S припаюється: BAT+ → `VBAT`, BAT− → `GND` |
 | U5 TP4056 | VCC(4) ← `CHG_IN`, BAT(5) ← `VBAT`, TEMP(1) ← GND, PROG(2) ← `PROG` (R6 10 кОм → GND, 100 мА), GND(3) ← GND, STDBY#(6) → NC, CHRG#(7) → NC, CE(8) ← GND, EP(9) ← GND |
-| U4 LDO | IN(1) ← `VBAT`, VSS(2) ← GND, CE(3) ← `LDO_EN` (R4 10 кОм ← VBAT), NC(4) → NC, VOUT(5) → `VCC_3V3`; C6 1 мкФ на IN, C7 1 мкФ на OUT |
-| R2, R3 | 100 кОм: VBAT → midpoint → GND; midpoint → ADC (PA1) |
+| U4 LDO | IN(3) ← `VBAT`, GND(1) ← GND, OUT(2) → `VCC_3V3`; CE немає — LDO завжди увімкнений; C6 1 мкФ на IN, C7 1 мкФ на OUT |
+| R2, R3 | 22 кОм: `VBAT` → Q1.drain → `VBAT_ADC` → R3 → GND; `VBAT_ADC` → PA1 (ADC1), C11 10 нФ; Q1.gate ← PA10 (`VBAT_DIV_EN`). **У сні Q1 вимкнено — дільник не споживає нічого** |
 
 ## 7. Програмування
 
@@ -171,8 +177,10 @@ EasyEDA для CH32V203C8U6.
   не працюватиме).
 - GND: A1, A12, B1, B12 + SHIELD → `GND`.
 - CC1 (A5) → R7 5.1 кОм → GND; CC2 (B5) → R8 5.1 кОм → GND.
-- D+/D− (A6, B6, A7, B7) і SBU (A8, B8) → NC: на QFN20 немає USB
-  (живлення лише).
+- D+ (A6, B6) → `USB_D+` → PA12; D− (A7, B7) → `USB_D-` → PA11.
+  **USB працює** (CH32V203C8U6 має USB FS, ADR-0011) — для мішені це лише
+  зручність (діагностика/зарядка), основний інтерфейс — LoRa.
+- SBU (A8, B8) → NC.
 
 ## 9. Антена та RF-мережа
 
@@ -193,6 +201,8 @@ EasyEDA для CH32V203C8U6.
 5. Антенна зона — без міді знизу під трасою.
 6. Зона U5/TP3..TP6/J3 — розсунути при layout (AGENT: SHIELD J3 ≈ 2.5 мм
    від U5).
+7. Q1 — поруч із вузлом дільника; gate-доріжка коротка (<10 мм), Q1.gate
+   далеко від SPI (вона перетинається з трасою SCK).
 
 ## 11. DNP
 

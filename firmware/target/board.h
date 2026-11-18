@@ -43,6 +43,13 @@
 #define BOARD_BTN        { HAL_PORT_A, 0 } /**< pin 10, input, pull-up, wake-up */
 #define BOARD_ADC_BATT   { HAL_PORT_A, 1 } /**< pin 11 -> VBAT divider -> ADC1 */
 
+/**
+ * Gate of Q1 (2N7002), the switch of the battery divider (ADR-0014).
+ * High = the divider is connected and draws ~95 uA; low = 0 uA.
+ * PA10 is free on the QFN-48 package.
+ */
+#define BOARD_BATT_DIV_EN { HAL_PORT_A, 10 } /**< pin 31 -> Q1.gate */
+
 /* ---- USB FS (CDC) ---------------------------------------------------- */
 
 #define BOARD_USB_DM     { HAL_PORT_A, 11 } /**< pin 32, PA11/USB1DM */
@@ -74,6 +81,11 @@
 #define BOARD_GPIO_SPARE7 { HAL_PORT_A, 15 }
 
 /**
+ * PA4 (BUSY) and PA8 (DIO1) are driven low by the SX1262 itself while it
+ * sleeps (internal 50 kOhm pull-downs, DS Table 8-3). While the target is
+ * sleeping these two pins must stay **floating inputs without a pull**,
+ * otherwise the MCU pull-up would fight the radio and burn ~82 uA.
+ *
  * PB2 is the BOOT1 strap of the QFN-48 package and is tied to GND
  * (guaranteed "boot from flash"), so it is NOT usable as a GPIO.
  * NRST of the MCU has no external reset network: WCH-Link resets over DAP.

@@ -2,7 +2,7 @@
  * @file    config.h
  * @brief   Build-time configuration for the arrow-stand-gen2 firmware.
  *
- * Board:  CH32V203F8U6 + SX1262IMLTRT + SC7A20HTR
+ * Board:  CH32V203C8U6 + SX1262IMLTRT + SC7A20HTR
  * Target: LoRa impact sensor for a shooting target.
  */
 
@@ -42,22 +42,36 @@
 /** Wake-up threshold in g (sensor full scale is +-16 g). */
 #define IMPACT_THRESHOLD_G 4.0f
 
-/** Output data rate of the accelerometer in Hz. */
-#define ACCEL_ODR_HZ 1600u
+/**
+ * Output data rate of the accelerometer while **watching** (Hz).
+ *
+ * The sensor stays in low-power mode at 100 Hz all the time (8.5 uA) and
+ * reports only threshold crossings - see docs/adr/0014. Waking the MCU on
+ * every sample would add ~100 uA.
+ */
+#define ACCEL_ODR_HZ 100u
 
 /**
- * Output data rate used while logging an impact (R-03): 3.2 kHz gives
- * ~10 ms of window in the 32-sample FIFO and does not miss the peak.
+ * Output data rate used while logging an impact (R-03), high-performance
+ * mode: 1.48 kHz gives ~11 ms of window in the 16-sample FIFO.
  */
-#define ACCEL_ODR_HZ_CAPTURE 3200u
+#define ACCEL_ODR_HZ_CAPTURE 1480u
+
+/**
+ * Threshold of the AOI1 interrupt (the only wake source from the sensor),
+ * in LSBs of the threshold register. 1 LSB = 128 mg at the +-16 g range,
+ * so 4 LSB = 0.5 g. The sensor compares the high-pass filtered data, so the
+ * static gravity does not eat the threshold budget.
+ */
+#define ACCEL_AOI_THRESHOLD_LSB 4u
 
 /** Minimum time between two reported events, milliseconds. */
 #define IMPACT_DEBOUNCE_MS 250u
 
 /* ---- Power ------------------------------------------------------------ */
 
-/** Deep sleep current target, microamps. */
-#define POWER_SLEEP_TARGET_UA 5u
+/** Deep sleep current target, microamps (docs/manufacturing/power-budget.md). */
+#define POWER_SLEEP_TARGET_UA 30u
 
 /* ---- Packet format ---------------------------------------------------- */
 

@@ -6053,8 +6053,7 @@
 			)
 		)
 	)
-	(footprint "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12"
-		(placed yes)
+	(footprint "arrowstand:USB_C_Receptacle_HRO_TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "62c45283-9852-4277-afd8-3d35a0272559")
 		(at 145 150)
@@ -6113,7 +6112,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "5f5fc56c-e176-4196-a23e-1cc6374f97ef")
+			(uuid "f5cf650d-2c0f-4938-9c35-5e9be042df5a")
 			(effects
 				(font
 					(size 1 1)
@@ -6126,7 +6125,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "79e7e660-ce52-4c7b-977c-094a51c0baf0")
+			(uuid "c6fb61fd-8c15-47d1-b76b-e424ca54e13e")
 			(effects
 				(font
 					(size 1 1)
@@ -6139,7 +6138,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "04fb6b00-be29-4814-8999-81b64fd6a9e9")
+			(uuid "d22411b3-3497-4be7-9ab2-9d31daf2f0d1")
 			(effects
 				(font
 					(size 1 1)
@@ -6525,15 +6524,15 @@
 			(uuid "08de269a-23f6-49c8-be5b-e55d0020ce4b")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step"
+		(model "${KIPRJMOD}/packages3d/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step"
 			(offset
-				(xyz 0 0 0)
+				(xyz -4.5 -3.7 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -0)
 			)
 		)
 	)

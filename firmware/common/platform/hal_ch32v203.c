@@ -93,6 +93,18 @@ void hal_enter_deep_sleep(hal_sleep_mode_t mode, uint32_t wake_ms)
     s_millis += 1u;
 }
 
+void hal_set_regulator_low_power(uint8_t enable)
+{
+    /*
+     * TODO(SDK): the real implementation needs the MounRiver header
+     * (ch32v20x.h). The semantics are fixed by the datasheet:
+     *   PWR->CTLR  - select the regulator mode for Stop mode
+     *                (1 = low-power mode -> 10.5 uA, 0 = run mode -> 70.5 uA)
+     * The exact bit position depends on the SDK header, hence the TODO.
+     */
+    (void)enable;
+}
+
 int hal_usb_enable(uint8_t enable)
 {
     (void)enable;

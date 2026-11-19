@@ -12642,7 +12642,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount"
+		(property "Footprint" "Connector_Coaxial:SMA_Amphenol_132134_Vertical"
 			(at 269.24 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -12653,7 +12653,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410010003_HenryTech-HL-SMA-KE-02_C20617215.pdf"
 			(at 269.24 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -12689,7 +12689,43 @@
 				)
 			)
 		)
-	)
+	
+		(property "LCSC" "C20617215"
+			(at 269.24 104.14 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "HL-SMA-KE-02"
+			(at 269.24 104.14 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "HenryTech"
+			(at 269.24 104.14 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "SMA female jack 50 Ом, вертикальний, для PCB (4 заземлювальні штири на квадраті 5.08 мм). Футпринт SMA_Amphenol_132134_Vertical — звірити посадкові отвори з даташитом деталі. Замінив колишній «edge-mount клон» C55608210: це виявився ДІОД, а не роз'єм"
+			(at 269.24 104.14 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		))
 	(symbol
 		(lib_id "Device:C")
 		(at 215.9 74.93 0)

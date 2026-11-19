@@ -14581,7 +14581,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010100_UNI-ROYAL-Uniroyal-Elec-0402WGF1003TCE_C25741.pdf"
 			(at 262.89 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -14603,7 +14603,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C149504"
+		(property "LCSC" "C25741"
 			(at 262.89 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -14614,7 +14614,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805W8F1003T5E"
+		(property "MPN" "0402WGF1003TCE"
 			(at 262.89 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -14625,7 +14625,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Uni Royal"
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
 			(at 262.89 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -14650,7 +14650,16 @@
 				)
 			)
 		)
-	)
+	
+		(property "Note" "Pull-up NRST SX1262. 0402 (футпринт у схемі та на платі — 0402; артикул 0805 C149504 не встав би на 0402-ланки)"
+			(at 262.89 132.08 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		))
 	(symbol
 		(lib_id "power:GND")
 		(at 186.69 110.49 0)

@@ -9104,7 +9104,7 @@
 		(placed yes)
 		(layer "F.Cu")
 		(uuid "e32b8d68-4340-4b2d-a759-c598af31aa80")
-		(at 143 85)
+		(at 149.5 104.5)
 		(descr "SMD rectangular pad as test Point, square 1.0mm side length")
 		(tags "test point SMD pad rectangle square")
 		(property "Reference" "TP1"

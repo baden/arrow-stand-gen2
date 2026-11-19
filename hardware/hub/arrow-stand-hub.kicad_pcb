@@ -91,6 +91,7 @@
 		(property "Reference" "J1"
 			(at -3.96 -3 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "53fc1604-ee28-4887-9fff-fa952b74c453")
 			(effects
 				(font
@@ -477,6 +478,7 @@
 		(property "Reference" "LED7"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "3cb45064-3aca-489c-939e-150282d1677e")
 			(effects
 				(font
@@ -752,6 +754,7 @@
 		(property "Reference" "TP1"
 			(at 0 -1.448 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "746a7198-7251-4d2a-8a40-6772800e7811")
 			(effects
 				(font
@@ -920,6 +923,7 @@
 		(property "Reference" "R2"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "af6e1ff3-2246-4555-a2b0-3688e81c7df1")
 			(effects
 				(font
@@ -1118,6 +1122,7 @@
 		(property "Reference" "R14"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "47aa38c8-7826-4d87-b593-9461624ec081")
 			(effects
 				(font
@@ -1316,6 +1321,7 @@
 		(property "Reference" "LED8"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "8e1ba4e7-fab1-40e1-8f0f-ec0845d96b33")
 			(effects
 				(font
@@ -1591,6 +1597,7 @@
 		(property "Reference" "R10"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "ca46fd3b-d7fe-46a6-866a-3d93e49e7652")
 			(effects
 				(font
@@ -1789,6 +1796,7 @@
 		(property "Reference" "R4"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "37d8c039-f34d-488b-8c5b-945eafa49008")
 			(effects
 				(font
@@ -1987,6 +1995,7 @@
 		(property "Reference" "R3"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "a8ec3f2e-0bd3-425c-85eb-6556e0d7e5fb")
 			(effects
 				(font
@@ -2185,6 +2194,7 @@
 		(property "Reference" "LED1"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "312a92e7-5e4d-4247-852a-8ba36aae558a")
 			(effects
 				(font
@@ -2460,6 +2470,7 @@
 		(property "Reference" "L1"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "9d852503-c3fd-4bce-a2bf-94c309b01064")
 			(effects
 				(font
@@ -2613,6 +2624,7 @@
 		(property "Reference" "U1"
 			(at 0 -3.4905 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "c3e2744f-549f-415d-a4c5-f597b10f82a0")
 			(effects
 				(font
@@ -3012,6 +3024,7 @@
 		(property "Reference" "LED5"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "dc2c8838-36c5-40aa-99f0-84877ec0e9fd")
 			(effects
 				(font
@@ -3287,6 +3300,7 @@
 		(property "Reference" "C15"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "31bd52dc-bc04-4d4e-ba97-f605ba081842")
 			(effects
 				(font
@@ -3295,7 +3309,7 @@
 				)
 			)
 		)
-		(property "Value" "TBD"
+		(property "Value" "10pF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "9865943d-a3e9-427f-8b67-2286a609e28c")
@@ -3306,7 +3320,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05C100JB5NNNC_C32949.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3340,12 +3354,51 @@
 				)
 			)
 		)
-		(property "Note" "RF matching placeholder - value TBD, tuned on bench (ADR-0009)"
+		(property "Note" "RX: шунт-конденсатор у вузлі RFI_N (аналог C12 у SX1261/2 DS). 10 пФ. Розрахунково, R-15"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0ed84d3a-33d4-4b6c-a1ca-156cb2bc3c71")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C32949"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8d2b1015-578d-4ed6-a046-94fd1ba89fdc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL05C100JB5NNNC"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e7d3f7fd-bde7-4da9-93e4-a6c9d877d49b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "592dd37c-af65-4cab-8d04-3d4161359e58")
 			(effects
 				(font
 					(size 1 1)
@@ -3432,7 +3485,7 @@
 			(size 0.56 0.62)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/ANT_RF")
+			(net "GND")
 			(pintype "passive")
 			(uuid "d0f5b5e3-ba89-4a6d-a75a-145dcfd4db8e")
 		)
@@ -3459,6 +3512,7 @@
 		(property "Reference" "R11"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "de65c0fa-8078-4dac-9a09-437aa96872f3")
 			(effects
 				(font
@@ -3656,6 +3710,7 @@
 		(property "Reference" "U2"
 			(at 0 -4.95 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "e1c2ba04-a687-4c65-8c78-dd08d1a94e03")
 			(effects
 				(font
@@ -4273,6 +4328,7 @@
 		(property "Reference" "C3"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "cd4f8430-a02a-418e-9cd8-c97b524e38bc")
 			(effects
 				(font
@@ -4471,6 +4527,7 @@
 		(property "Reference" "C10"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "db3e2e49-7a78-4821-b56c-2deb604a18df")
 			(effects
 				(font
@@ -4669,6 +4726,7 @@
 		(property "Reference" "LED3"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "7b0d87da-786b-499d-891e-c4ee501cd92b")
 			(effects
 				(font
@@ -4934,6 +4992,199 @@
 			)
 		)
 	)
+	(footprint "Inductor_SMD:L_0402_1005Metric"
+		(layer "F.Cu")
+		(uuid "4190f70e-962f-4e1a-b230-d7c792886315")
+		(at 154.505 79.955 -90)
+		(descr "Inductor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(tags "inductor")
+		(property "Reference" "L2"
+			(at 0 -1.17 90)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "929a56ca-c17e-4b8a-a89d-d8a0d5eb5d55")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "10nH"
+			(at 0 1.17 90)
+			(layer "F.Fab")
+			(uuid "63fc33e5-fa42-450c-9329-1d0fae1f0848")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2302231208_FH--Guangdong-Fenghua-Advanced-Tech-VHF100505HQ10NJT_C395047.pdf"
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "57d867be-fbfd-4ebb-b773-9d0b945b377d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 0 0 90)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a91f6230-a17f-44e2-bbab-479c22d8961d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 90)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "11b8f5a0-ba38-4c80-b59f-a086bb6940d3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Note" "RX: балун — індуктор послідовно між RFI_P та RFI_N (аналог L6 у SX1261/2 DS). 10 нГ (X_L = 27 Ом @433 МГц) — розрахункове стартове значення, R-15"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "497aa2f4-80fc-4416-a396-d5c4acdd9cd9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C395047"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8d4da5a4-10e3-4b3f-886f-79e39596ba36")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "VHF100505HQ10NJT"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0682b36f-cb70-4934-aab8-1bf6fa2b42ca")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "FH (Guangdong Fenghua Advanced Tech)"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "14faa5d9-7a17-4902-b08a-1bd549669c55")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
+		(path "/4c76c2b4-92d4-4a09-b017-fcb94f2607b8")
+		(sheetname "/")
+		(sheetfile "arrow-stand-hub.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -0.93 -0.47)
+			(end 0.93 0.47)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "acf3ff0b-8e40-43b6-abb7-bd019beb2d7f")
+		)
+		(fp_rect
+			(start -0.5 -0.25)
+			(end 0.5 0.25)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "9f5ddab3-08d1-4a95-9dda-f19f0129cb56")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 90)
+			(layer "F.Fab")
+			(uuid "32735c7a-a26f-44fe-92a9-4f259e4d1001")
+			(effects
+				(font
+					(size 0.25 0.25)
+					(thickness 0.04)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -0.485 0 270)
+			(size 0.59 0.64)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net "/RFI_P")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "0ae34e04-b216-4356-a830-59f7d533a123")
+		)
+		(pad "2" smd roundrect
+			(at 0.485 0 270)
+			(size 0.59 0.64)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net "/RFI_N")
+			(pinfunction "2_2")
+			(pintype "passive")
+			(uuid "34bd08d2-2ce5-4267-ae2f-3fea20b757e0")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_0402_1005Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Resistor_SMD:R_0402_1005Metric"
 		(placed yes)
 		(layer "F.Cu")
@@ -4944,6 +5195,7 @@
 		(property "Reference" "R5"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "6b3ba6d2-85ae-4acf-bccf-6367244d34a7")
 			(effects
 				(font
@@ -5142,6 +5394,7 @@
 		(property "Reference" "C11"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "d9e13a33-6928-4a64-afe0-47ede6a37532")
 			(effects
 				(font
@@ -5340,6 +5593,7 @@
 		(property "Reference" "C2"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "187a8b91-d710-42df-84fb-9761c8df199e")
 			(effects
 				(font
@@ -5499,6 +5753,7 @@
 		(property "Reference" "TP2"
 			(at 0 -1.448 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "c97cac9d-18f8-4181-8a84-a73bcc225f76")
 			(effects
 				(font
@@ -5667,6 +5922,7 @@
 		(property "Reference" "R16"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "389d2949-1499-4137-83d8-a54d7329d09c")
 			(effects
 				(font
@@ -5686,7 +5942,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010100_UNI-ROYAL-Uniroyal-Elec-0402WGF1003TCE_C25741.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5720,7 +5976,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C149504"
+		(property "LCSC" "C25741"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5733,7 +5989,7 @@
 				)
 			)
 		)
-		(property "MPN" "0805W8F1003T5E"
+		(property "MPN" "0402WGF1003TCE"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5746,12 +6002,25 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Uni Royal"
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a9917151-0575-4924-aaef-4e68df5ce220")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Note" "Pull-up NRST SX1262. 0402 (футпринт у схемі та на платі — 0402; артикул 0805 C149504 не встав би на 0402-ланки)"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d5ff2719-c43d-4f03-808a-11cf1564668f")
 			(effects
 				(font
 					(size 1 1)
@@ -5865,6 +6134,7 @@
 		(property "Reference" "C9"
 			(at 0 -1.68 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "74f8351c-02a0-4d66-ab71-6a6fdcc1fc88")
 			(effects
 				(font
@@ -6062,6 +6332,7 @@
 		(property "Reference" "J3"
 			(at 0 -5.645 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "b30ae4a9-df96-4d14-a58b-26036d41fb56")
 			(effects
 				(font
@@ -6546,6 +6817,7 @@
 		(property "Reference" "LED6"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "f96f141f-a927-479d-8e71-b74eda3cb2ae")
 			(effects
 				(font
@@ -6821,6 +7093,7 @@
 		(property "Reference" "C6"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "5e729ffc-f188-43f2-a980-6595d54e126c")
 			(effects
 				(font
@@ -7019,6 +7292,7 @@
 		(property "Reference" "R8"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "273f8d49-1254-4d36-9ec2-57916ba9b86d")
 			(effects
 				(font
@@ -7217,6 +7491,7 @@
 		(property "Reference" "LED2"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "cf45950e-4623-49e9-8441-746ab6794717")
 			(effects
 				(font
@@ -7492,6 +7767,7 @@
 		(property "Reference" "C7"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "e32b702f-59cd-40d0-bbb7-0b818cb0aa5c")
 			(effects
 				(font
@@ -7690,6 +7966,7 @@
 		(property "Reference" "C1"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "57a98505-2350-48bd-a31a-fe0b01c941eb")
 			(effects
 				(font
@@ -7888,6 +8165,7 @@
 		(property "Reference" "C16"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "e0c2424e-f058-49f8-a344-7b3c2a0e8690")
 			(effects
 				(font
@@ -7896,7 +8174,7 @@
 				)
 			)
 		)
-		(property "Value" "TBD"
+		(property "Value" "10pF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "564642f0-06f0-446e-8d53-f7bd50b232bd")
@@ -7907,7 +8185,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05C100JB5NNNC_C32949.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7941,12 +8219,51 @@
 				)
 			)
 		)
-		(property "Note" "RF matching placeholder - value TBD, tuned on bench (ADR-0009)"
+		(property "Note" "RX: шунт-конденсатор антенного вузла (аналог C13 у SX1261/2 DS). 10 пФ. Розрахунково, R-15"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "227e40a4-db4b-4970-9326-54885dd8d7af")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C32949"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6ff6678a-0875-4fd5-98ec-a23065d5a9c3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "CL05C100JB5NNNC"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "752e1ae2-5229-4f3a-a4ee-ed4d6140a776")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cbd31c0f-3fc1-49ac-8923-392cea22388e")
 			(effects
 				(font
 					(size 1 1)
@@ -8060,6 +8377,7 @@
 		(property "Reference" "SW1"
 			(at 0 -2.5 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "d3fd4333-ab58-449a-9c80-b7bc05046d85")
 			(effects
 				(font
@@ -8319,6 +8637,7 @@
 		(property "Reference" "LED4"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "4beda3ee-e245-462f-bde3-615e7f53d087")
 			(effects
 				(font
@@ -8594,6 +8913,7 @@
 		(property "Reference" "C4"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "7afd1ff9-608e-4f29-bcd2-54a2a57e404c")
 			(effects
 				(font
@@ -8792,6 +9112,7 @@
 		(property "Reference" "R1"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "a25ea224-4b19-4db7-8d3d-9dddd209acdf")
 			(effects
 				(font
@@ -8989,6 +9310,7 @@
 		(property "Reference" "Y1"
 			(at 0 -2.7 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "d922caa9-f537-4472-9093-917f70fefa6d")
 			(effects
 				(font
@@ -9197,6 +9519,7 @@
 		(property "Reference" "R15"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "c45d5396-e993-4a54-ae45-8d8440c02052")
 			(effects
 				(font
@@ -9395,6 +9718,7 @@
 		(property "Reference" "R12"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "35a49f4c-f67b-4f5b-86f8-264bfec0e348")
 			(effects
 				(font
@@ -9593,6 +9917,7 @@
 		(property "Reference" "C12"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "bcdd4470-2926-4c27-9fad-d40bb5fe86fd")
 			(effects
 				(font
@@ -9791,6 +10116,7 @@
 		(property "Reference" "C8"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "a4720e82-f5e2-4010-b9de-670b6166f744")
 			(effects
 				(font
@@ -9989,6 +10315,7 @@
 		(property "Reference" "C5"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "f13d1e21-e936-48f3-9cc0-d78a2ac45898")
 			(effects
 				(font
@@ -10187,6 +10514,7 @@
 		(property "Reference" "R6"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "c574a2fb-dd2b-482a-9028-23881288ce30")
 			(effects
 				(font
@@ -10385,6 +10713,7 @@
 		(property "Reference" "R7"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "1637cad8-43ab-4f89-83dc-bc715e74722b")
 			(effects
 				(font
@@ -10583,6 +10912,7 @@
 		(property "Reference" "C14"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "173de840-2702-40e6-89ab-fbcdd3c7afa4")
 			(effects
 				(font
@@ -10591,7 +10921,7 @@
 				)
 			)
 		)
-		(property "Value" "TBD"
+		(property "Value" "100pF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "18ab38c4-e401-4311-9efb-7867fa42fa90")
@@ -10602,7 +10932,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG101J500NT_C1546.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10636,12 +10966,51 @@
 				)
 			)
 		)
-		(property "Note" "RF matching placeholder - value TBD, tuned on bench (ADR-0009)"
+		(property "Note" "RX: послідовний DC block (антенний вузол -> RFI_P). 100 пФ (X_c = 3.7 Ом @433 МГц). Розрахунково, R-15"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "218870ee-88d0-40e7-b7a1-a914488e48e0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C1546"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f61c9731-ccee-4722-a12f-b4d817b24498")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "0402CG101J500NT"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "919ad6b1-072a-4827-bcd2-25475a1b80f9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "FH (Guangdong Fenghua Advanced Tech)"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ef366fd0-f6a3-4337-bca6-32718cc20e5f")
 			(effects
 				(font
 					(size 1 1)
@@ -10755,6 +11124,7 @@
 		(property "Reference" "LED10"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "beec281e-2366-4947-83d8-44be289e4dda")
 			(effects
 				(font
@@ -11030,6 +11400,7 @@
 		(property "Reference" "LED9"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "ee9fe71f-77ed-4421-b525-852fca724457")
 			(effects
 				(font
@@ -11305,6 +11676,7 @@
 		(property "Reference" "R9"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "e53c4b26-8e75-472f-81a1-8209463d74aa")
 			(effects
 				(font
@@ -11503,6 +11875,7 @@
 		(property "Reference" "C13"
 			(at 0 -1.16 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "0a965c74-42b7-4891-b7a2-1e0d5ad27bbe")
 			(effects
 				(font
@@ -11511,7 +11884,7 @@
 				)
 			)
 		)
-		(property "Value" "TBD"
+		(property "Value" "100pF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "f7595acc-c177-4f60-a96d-2e576a24c2af")
@@ -11522,7 +11895,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG101J500NT_C1546.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11556,12 +11929,51 @@
 				)
 			)
 		)
-		(property "Note" "TX DC block - NOT FITTED (DNP): hub is RX-only; without a T/R switch the PA output would load the LNA input"
+		(property "Note" "TX: DC block RFO -> ANT_RF — DNP: у хабі PA вимкнений, TX-ланцюг від'єднано (ADR-0009)"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fdc0206c-0679-47f6-8137-8b4fb9c03a41")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C1546"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1c76f28c-3632-4166-9d2f-c585c47b235f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "0402CG101J500NT"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5f291d55-b8a8-414d-b1b2-01541c5de295")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "FH (Guangdong Fenghua Advanced Tech)"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fc7fc043-4aeb-43cc-aa01-41ac97b8edec")
 			(effects
 				(font
 					(size 1 1)
@@ -11675,6 +12087,7 @@
 		(property "Reference" "D1"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "a1c06bf7-6d13-4231-bf3d-49c1b6fef9e0")
 			(effects
 				(font
@@ -11949,6 +12362,7 @@
 		(property "Reference" "U4"
 			(at 0 -2.9915 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "bf9b5480-375c-4f89-9758-ff9ea8e3adbd")
 			(effects
 				(font
@@ -12166,6 +12580,7 @@
 		(property "Reference" "R13"
 			(at 0 -1.17 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "bf69a63f-ff38-46dc-be86-393a0e324b7f")
 			(effects
 				(font

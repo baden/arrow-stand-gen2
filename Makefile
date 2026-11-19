@@ -143,6 +143,10 @@ libs-check:
 # --- Вартість -----------------------------------------------------------
 
 # Зняти реальну цінову сходинку LCSC і оновити ціни в BOM.
+bom-check:
+	@echo "Звірка артикулів BOM із базою LCSC (MPN + категорія)"
+	@python3 tools/verify_bom_codes.py --full
+
 prices:
 	python3 tools/lcsc_prices.py --from-bom hardware/bom/bom-draft.csv \
 	  --qty $(QTY) --out hardware/bom/lcsc-prices.csv --update-bom
